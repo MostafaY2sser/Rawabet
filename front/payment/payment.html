@@ -1,0 +1,707 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Custom Css  -->
+    <link rel="stylesheet" href="../../public/assets/css/customer/customer.css">
+
+
+
+
+</head>
+<body>
+
+
+
+    <header>
+        <div class="left">
+            <div class="logo">
+                <img src="../../public/assets/images/customer/logo.png" alt="logo">
+                <div class="text">
+                    <h6>منصة المقاولين</h6>
+                    <span>نظام إدارة شامل</span>
+                </div>
+            </div>
+            <div class="close_bar">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 2L6 14M5.2 2L10.8 2C11.9201 2 12.4802 2 12.908 2.21799C13.2843 2.40973 13.5903 2.71569 13.782 3.09202C14 3.51984 14 4.0799 14 5.2L14 10.8C14 11.9201 14 12.4802 13.782 12.908C13.5903 13.2843 13.2843 13.5903 12.908 13.782C12.4802 14 11.9201 14 10.8 14L5.2 14C4.07989 14 3.51984 14 3.09202 13.782C2.71569 13.5903 2.40973 13.2843 2.21799 12.908C2 12.4802 2 11.9201 2 10.8L2 5.2C2 4.07989 2 3.51984 2.21799 3.09202C2.40973 2.71569 2.71569 2.40973 3.09202 2.21799C3.51984 2 4.0799 2 5.2 2Z" stroke="#111111" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>      
+            </div>
+            <div class="input_group">
+                <input type="search" name="project-search" placeholder="...البحث في المشاريع والعروض">
+                <div class="search_icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="#9CA3AF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M17.5013 17.5013L13.918 13.918" stroke="#9CA3AF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <a href="add-project/project-step.html" class="add_project_btn main_btn_bg">
+                <span>مشروع جديد</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.9987 3.33203V12.6654M3.33203 7.9987H12.6654" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+
+            <div class="user">
+                <div class="userimg">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.6654 14V12.6667C12.6654 11.9594 12.3844 11.2811 11.8843 10.781C11.3842 10.281 10.7059 10 9.9987 10H5.9987C5.29145 10 4.61318 10.281 4.11308 10.781C3.61298 11.2811 3.33203 11.9594 3.33203 12.6667V14" stroke="#3C3F47" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7.9987 7.33333C9.47146 7.33333 10.6654 6.13943 10.6654 4.66667C10.6654 3.19391 9.47146 2 7.9987 2C6.52594 2 5.33203 3.19391 5.33203 4.66667C5.33203 6.13943 6.52594 7.33333 7.9987 7.33333Z" stroke="#3C3F47" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <a href="#" class="name">
+                    <h6>أحمد الراشد</h6>
+                    <p class="email">AhmedR1@mail.com</p>
+                </a>
+                <div class="icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6L8 10L12 6" stroke="#6B7280" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <aside>
+        <ul>
+            <li>
+                <a href="#">
+                    <span>لوحة التحكم</span>
+                    <i class="fa-regular fa-house"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>مشاريعي</span>
+                    <i class="fa-regular fa-folder-open"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>المدفوعات</span>
+                    <i class="fa-regular fa-credit-card"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>الإشعارات</span>
+                    <i class="fa-regular fa-bell"></i>
+                </a>
+            </li>
+        </ul>
+
+        <button class="logout">
+            <span>تسجيل الخروج</span>
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
+    </aside>
+
+
+    <div class="payment">
+        <div class="wrapper">
+
+            <div class="head">
+                <h6>الدفع والتعاقد</h6>
+
+                <ul class="payment_steper">
+                    <li class="active" data-target="payment_method">
+                        <p>الدفع الأولي</p>
+                        <span>01</span>
+                    </li>
+                    <li data-target="electronic_signature">
+                        <p>التوقيع الإلكتروني</p>
+                        <span>02</span>
+                    </li>
+                    <li data-target="start_project">
+                        <p>بدء المشروع</p>
+                        <span>03</span>
+                    </li>
+                </ul>
+
+                <a href="../customer/home-customer.html" class="close">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+                
+            </div>
+
+            <div class="step_section  payment_method ">
+
+                <div class="top">
+                    <h6>طريقة الدفع</h6>
+                    <p class="choose">اختر الطريقة المناسبة لك لدفع العربون</p>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-8">
+                        <form action="" method="POST">
+
+                            <div class="bg_white">
+                                <div class="payment_options" id="paymentMethods">
+                                    <label class="option">
+                                        <input type="radio" name="payment" value="credit"  />
+                                        <div class="info">
+                                            <strong>بطاقة ائتمانية</strong>
+                                            <span>فيزا، ماستركارد، أمريكان إكسبريس</span>
+                                        </div>
+                                        <i class="fa-regular fa-credit-card icon"></i>
+                                    </label>
+
+                                    <label class="option">
+                                        <input type="radio" name="payment" value="mada" />
+                                        <div class="info">
+                                        <strong>بطاقة مدى</strong>
+                                        <span>البطاقات السعودية المحلية</span>
+                                        </div>
+                                        <i class="fa-solid fa-credit-card icon"></i>
+                                    </label>
+
+                                    <label class="option">
+                                        <input type="radio" name="payment" value="bank" />
+                                        <div class="info">
+                                        <strong>تحويل بنكي</strong>
+                                        <span>تحويل مباشر من حسابك البنكي</span>
+                                        </div>
+                                        <i class="fa-solid fa-building-columns icon"></i>
+                                    </label>
+
+                                    <label class="option">
+                                        <input type="radio" name="payment" value="stc" />
+                                        <div class="info">
+                                        <strong>STC Pay</strong>
+                                        <span>محفظة STC الرقمية</span>
+                                        </div>
+                                        <i class="fa-solid fa-wallet icon"></i>
+                                    </label>
+
+                                    <label class="option">
+                                        <input type="radio" name="payment" value="apple" />
+                                        <div class="info">
+                                        <strong>Apple Pay</strong>
+                                        <span>الدفع عبر Apple Pay</span>
+                                        </div>
+                                        <i class="fa-brands fa-apple icon"></i>
+                                    </label>
+                                </div>
+
+                                <div class="payment_details">
+                                    <div class="input_group">
+                                        <label for="cart_number">رقم البطاقة *</label>
+                                        <input type="text" name="cart_number" id="cart_number" placeholder="1234 5678 9012 3456" required>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="input_group">
+                                                <label for="expiration_date">تاريخ الانتهاء *</label>
+                                                <input type="date" name="expiration_date" id="expiration_date" placeholder="MM/YY" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="input_group">
+                                                <label for="security_code">رقم البطاقة *</label>
+                                                <input type="text" name="security_code" id="security_code" placeholder="123" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="input_group">
+                                        <label for="user">اسم حامل البطاقة *</label>
+                                        <input type="text" name="user" id="user" placeholder="الاسم كما هو مكتوب على البطاقة" required>
+                                    </div>
+                                </div>
+                        </div>
+                        
+                        <label class="financial_guarantee">
+                                <input type="checkbox" name="financial_guarantee" value="financial_guarantee"  />
+                                <div class="info">
+                                    <span>أوافق على نظام الضمان المالي (Escrow)</span>
+                                    <p>المبلغ سيتم حجزه بشكل آمن في المنصة ولن يتم تحويله للمقاول إلا بعد إنجاز المراحل المتفق عليها</p>
+                                </div>
+                            </label>
+                        <label class="terms_conditions">
+                                <input type="checkbox" name="terms_conditions" value="terms_conditions" />
+                                <div class="info">
+                                    <span>أوافق على شروط وأحكام المنصة وسياسة الاسترداد</span>
+                                    <p>بالموافقة، أنت تقر بقراءة وفهم جميع الشروط والأحكام المتعلقة بالدفع والتعاقد</p>
+                                </div>
+                            </label>
+
+                        </form>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="summry">
+                            <div class="title">
+                                <h6>ملخص الدفع</h6>
+                                <span><i class="fa-solid fa-dollar-sign"></i></span>
+                            </div>
+                            <div class="lines">
+                                <div class="total">
+                                    <p>إجمالي قيمة المشروع:</p>
+                                    <span> ر.س.  1,200,000</span>
+                                </div>
+                                <div class="center">
+                                    <div class="deposit">
+                                        <p> (%30) :العربون المطلوب</p>
+                                        <span>360,000 ر.س.</span>
+                                    </div>
+                                    <div class="remaining">
+                                        <p>المبلغ المتبقي:</p>
+                                        <span>840,000 ر.س.</span>
+                                    </div>
+                                </div>
+                                <div class="processing">
+                                    <p>رسوم المعالجة:</p>
+                                    <span>2.9%</span>
+                                </div>
+                            </div>
+
+                            <div class="security_guarantee">
+                                <div>
+                                    <p>ضمان الأمان</p>
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </div>
+                                <ul>
+                                    <li>• المبلغ محجوز بشكل آمن</li>
+                                    <li>• حماية كاملة لحقوقك</li>
+                                    <li>• استرداد فوري في حالة المشاكل</li>
+                                </ul>
+                            </div>
+
+                            <button class="main_btn_bg">
+                                <span>دفع العربون الآن</span>
+                                <i class="fa-solid fa-lock"></i>
+                            </button>
+
+                            <p class="click">بالنقر على "دفع العربون الآن" أنت توافق على جميع الشروط والأحكام</p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="step_section  electronic_signature">
+
+                <div class="title">
+                    <div class="text">
+                        <h6>عقد مقاولة بناء</h6>
+                        <div>
+                            <p>: رقم العقد</p>
+                            <span>CNT-1-2024</span>
+                        </div>
+                    </div>
+
+                    <button class="main_btn_bg">
+                        <i class="fa-solid fa-download"></i>
+                        <span>تحميل PDF</span>
+                    </button>
+                </div>
+
+
+                <div class="row">
+
+
+                    <div class="col-md-8">
+                        <div class="empty">
+
+                        </div>
+
+                        <div class="financial_terms summry my-3">
+                            <div class="share_head">
+                                <span><i class="fa-solid fa-dollar-sign"></i></span>
+                                <h6>الشروط المالية</h6>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-4 ">
+                                    <div class="box one mb-3 mb-md-0">
+                                        <h4>860,000 ر.س.</h2>
+                                        <span>المبلغ المتبقي</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="box tow mb-3 mb-md-0">
+                                        <h4>860,000 ر.س.</h2>
+                                        <span>المبلغ المتبقي</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="box three mb-3 mb-md-0">
+                                        <h4>860,000 ر.س.</h2>
+                                        <span>المبلغ المتبقي</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h6 class="sub_title">جدول الدفعات:</h6>
+
+                            <ul>
+                                <li>
+                                    <span class="num paid">1</span>
+                                    <div class="text">
+                                        <p>بداية الأعمال</p>
+                                        <div>
+                                            <span>المدة المتوقعة: </span>
+                                            <span>أسبوع واحد</span>
+                                        </div>
+                                    </div>
+                                    <div class="value">
+                                        <span>2024-02-01</span>
+                                        <p class="paid">مدفوع</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="num">2</span>
+                                    <div class="text">
+                                        <p>بداية الأعمال</p>
+                                        <div>
+                                            <span>المدة المتوقعة: </span>
+                                            <span>أسبوع واحد</span>
+                                        </div>
+                                    </div>
+                                    <div class="value">
+                                        <span>2024-02-01</span>
+                                        <p class="">مستحق</p>
+                                    </div>
+                                </li>
+                            </ul>
+
+
+
+                        </div>
+
+                        <div class="timeline summry my-3">
+                            <div class="share_head">
+                                <span><i class="fa-regular fa-calendar"></i></span>
+                                <h6>الجدول الزمني</h6>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="box one mb-3 mb-md-0">
+                                        <i class="fa-regular fa-calendar"></i>
+                                        <span>2024-02-01</span>
+                                        <p>تاريخ البدء</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="box tow mb-3 mb-md-0">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span>4.5 أشهر</span>
+                                        <p>مدة التنفيذ</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="box three mb-3 mb-md-0">
+                                        <i class="fa-regular fa-circle-check"></i>
+                                        <span>2024-06-15</span>
+                                        <p>تاريخ التسليم</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h6 class="sub_title">المعالم الزمنية:</h6>
+
+                            <ul>
+                                <li>
+                                    <span class="num paid">1</span>
+                                    <div class="text">
+                                        <p>بداية الأعمال</p>
+                                        <div>
+                                            <span>المدة المتوقعة: </span>
+                                            <span>أسبوع واحد</span>
+                                        </div>
+                                    </div>
+                                    <div class="value">
+                                        <span>2024-02-01</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="num">2</span>
+                                    <div class="text">
+                                        <p>بداية الأعمال</p>
+                                        <div>
+                                            <span>المدة المتوقعة: </span>
+                                            <span>أسبوع واحد</span>
+                                        </div>
+                                    </div>
+                                    <div class="value">
+                                        <span>2024-02-01</span>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="signature summry">
+                            <div class="top">
+                                <h6>ملخص الدفع</h6>
+                                <span><i class="fa-regular fa-pen-to-square"></i></span>
+                            </div>
+                            <form action="" method="POST">
+                                <div class="identity_verification ">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <div class="text">
+                                        <span>التحقق من الهوية:</span>
+                                        <p>سيتم إرسال رمز التحقق إلى رقم هاتفك المسجل</p>
+                                        <input type="text" name="phone" id="phone" value="+966 50 123 4567" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="verification_done ">
+                                    <img src="../../public/assets/images/customer/icons/green-check.png" alt="">
+                                    <p>تم إرسال رمز التحقق إلى هاتفك</p>
+                                </div>
+
+                                <div class="agree_terms mt-4">
+                                    <input type="checkbox" name="agree_terms" id="agree_terms" required >
+                                    <div class="text">
+                                        <span>أوافق على جميع بنود العقد المذكورة أعلاه *</span>
+                                        <p>بالموافقة، أنت تقر بقراءة وفهم جميع شروط العقد والالتزام بها</p>
+                                    </div>
+                                </div>
+
+                                <div class="additional_notes mt-3">
+                                    <div class="input_group">
+                                        <label for="additional_notes">ملاحظات إضافية (اختياري)</label>
+                                        <textarea name="additional_notes" id="additional_notes" placeholder="أي ملاحظات أو تعديلات تود إضافتها..."></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="verification_code d-none">
+                                    <div class="input_group mt-3">
+                                        <label for="verification_code">*أدخل رمز التحقق</label>
+                                        <input type="text" name="verification_code" id="verification_code" placeholder="12345" required>
+                                    </div>
+                                </div>
+
+                                <button class="main_btn_bg d-none">
+                                    <span>إرسال رمز التحقق</span>
+                                    <i class="fa-brands fa-telegram"></i>
+                                </button>
+                                <button class="main_btn_bg  d-none">
+                                    <span>تأكيد الرمز</span>
+                                    <i class="fa-solid fa-lock"></i>
+                                </button>
+                                <button class="main_btn_bg green">
+                                    <span>توقيع العقد إلكترونياً</span>
+                                    <i class="fa-regular fa-pen-to-square"></i>
+                                </button>
+                            </form>
+
+                            <div class="legal_notice">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                <div class="text">
+                                    <span>تنبيه قانوني:</span>
+                                    <p>التوقيع الإلكتروني له نفس القوة القانونية للتوقيع التقليدي وفقاً لنظام التعاملات الإلكترونية السعودي</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="contract_summary summry my-4">
+                            <h6>ملخص العقد</h6>
+                            <ul>
+                                <li>
+                                    <p>قيمة العقد:</p>
+                                    <span>1,200,000 ر.س.</span>
+                                </li>
+                                <li>
+                                    <p>مدة التنفيذ:</p>
+                                    <span>4.5 أشهر</span>
+                                </li>
+                                <li>
+                                    <p>تاريخ البدء:</p>
+                                    <span>2024-02-01</span>
+                                </li>
+                                <li>
+                                    <p>تاريخ التسليم:</p>
+                                    <span>2024-06-15</span>
+                                </li>
+                            </ul>
+                            <div class="payment_status">
+                                <p>حالة الدفع:</p>
+                                <span>✓ العربون مدفوع</span>
+                            </div>
+                        </div>
+
+                        <div class="legal_protection summry">
+                            <h6>الحماية القانونية</h6>
+                            <ul>
+                                <li>
+                                    <p>عقد معتمد قانونياً</p>
+                                    <img src="../../public/assets/images/customer/icons/checked.png" alt="">
+                                </li>
+                                <li>
+                                    <p>نظام الضمان المالي (Escrow)</p>
+                                    <img src="../../public/assets/images/customer/icons/checked.png" alt="">
+                                </li>
+                                <li>
+                                    <p>تأمين شامل ضد المخاطر</p>
+                                    <img src="../../public/assets/images/customer/icons/checked.png" alt="">
+                                </li>
+                                <li>
+                                    <p>حل النزاعات وفقاً للأنظمة السعودية</p>
+                                    <img src="../../public/assets/images/customer/icons/checked.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+
+                    
+                </div>
+
+            </div>
+
+
+            <div class="step_section start_project ">
+                <section class="contract-success">
+                    <div class="header">
+                        <div class="cnt">
+                            <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2116_15222)">
+                                    <path
+                                        d="M21.3346 8.66566C21.3346 11.999 19.0013 13.6657 16.228 14.6323C16.0827 14.6815 15.925 14.6792 15.7813 14.6257C13.0013 13.6657 10.668 11.999 10.668 8.66566V3.999C10.668 3.82219 10.7382 3.65262 10.8632 3.52759C10.9883 3.40257 11.1578 3.33233 11.3346 3.33233C12.668 3.33233 14.3346 2.53233 15.4946 1.519C15.6359 1.39833 15.8155 1.33203 16.0013 1.33203C16.1871 1.33203 16.3667 1.39833 16.508 1.519C17.6746 2.539 19.3346 3.33233 20.668 3.33233C20.8448 3.33233 21.0143 3.40257 21.1394 3.52759C21.2644 3.65262 21.3346 3.82219 21.3346 3.999V8.66566Z"
+                                        stroke="#166534" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2116_15222">
+                                        <rect width="16" height="16" fill="white" transform="translate(8)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <p>عقد نشط رقم CNT-1-2024 </p>
+                        </div>
+                        <div class="big-img">
+                            <svg width="65" height="64" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M58.8355 26.6666C60.0533 32.6434 59.1854 38.8571 56.3764 44.2714C53.5674 49.6857 48.9872 53.9734 43.3995 56.4195C37.8118 58.8655 31.5545 59.3221 25.6709 57.713C19.7874 56.1038 14.6333 52.5264 11.0682 47.5771C7.50311 42.6278 5.74248 36.6059 6.07992 30.5157C6.41737 24.4254 8.8325 18.6349 12.9226 14.1098C17.0126 9.58464 22.5304 6.59845 28.5557 5.64918C34.5809 4.69991 40.7496 5.84493 46.0328 8.8933"
+                                    stroke="#F5932E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M24.6992 29.3346L32.6992 37.3346L59.3659 10.668" stroke="#F5932E" stroke-width="5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="start-text">
+                            <h3>مبروك! تم توقيع العقد بنجاح</h3>
+                            <span>تم توقيع عقد " بناء فيلا سكنية فاخرة " إلكترونياً وأصبح ساري المفعول</span>
+                            <div class="all-time">
+                                <div class="time">
+                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10.3997 18.3346C15.0021 18.3346 18.7331 14.6037 18.7331 10.0013C18.7331 5.39893 15.0021 1.66797 10.3997 1.66797C5.79737 1.66797 2.06641 5.39893 2.06641 10.0013C2.06641 14.6037 5.79737 18.3346 10.3997 18.3346Z"
+                                            stroke="#F5932E" stroke-width="1.66667" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M10.3984 5V10L13.7318 11.6667" stroke="#F5932E" stroke-width="1.66667"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <p>وقت التوقيع: ٧:٤٩:٠٢ ص</p>
+                                </div>
+                                <div class="time">
+
+                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.82031 1.66797V5.0013" stroke="#F5932E" stroke-width="1.66667"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M13.4844 1.66797V5.0013" stroke="#F5932E" stroke-width="1.66667"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M15.9857 3.33203H4.31901C3.39854 3.33203 2.65234 4.07822 2.65234 4.9987V16.6654C2.65234 17.5858 3.39854 18.332 4.31901 18.332H15.9857C16.9062 18.332 17.6523 17.5858 17.6523 16.6654V4.9987C17.6523 4.07822 16.9062 3.33203 15.9857 3.33203Z"
+                                            stroke="#F5932E" stroke-width="1.66667" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M2.65234 8.33203H17.6523" stroke="#F5932E" stroke-width="1.66667"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <p>تاريخ التوقيع: ٢٠‏/١‏/١٤٤٧ هـ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mx-md-4">
+                        <div class="col-lg-7">
+                            <div class="box-1">
+                            <h4>الخطوات التالية</h4>
+                                <p>ما يجب فعله بعد توقيع العقد</p>
+                                <div class="card">
+                                    <span class="n">1</span>
+                                    <div class="header-of-box ">
+                                        <h4>التواصل مع المقاول</h4>
+                                        <p>سيتواصل معك مدير المشروع خلال 24 ساعة لتنسيق بداية الأعمال</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <span class="n">2</span>
+                                    <div class="header-of-box ">
+                                        <h4>التواصل مع المقاول</h4>
+                                        <p>سيتواصل معك مدير المشروع خلال 24 ساعة لتنسيق بداية الأعمال</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <span class="n">3</span>
+                                    <div class="header-of-box ">
+                                        <h4>التواصل مع المقاول</h4>
+                                        <p>سيتواصل معك مدير المشروع خلال 24 ساعة لتنسيق بداية الأعمال</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <span class="n">4</span>
+                                    <div class="header-of-box ">
+                                        <h4>التواصل مع المقاول</h4>
+                                        <p>سيتواصل معك مدير المشروع خلال 24 ساعة لتنسيق بداية الأعمال</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="box-2">
+                               <div class="head-2">
+                                    <span><i class="fa-solid fa-pen-to-square"></i></span>
+                                    <p>إجراءات سريعة</p>
+                               </div>
+                               <button class="main_btn_bg">
+                                    <i class="fa-solid fa-download"></i>
+                                    <span>تحميل نسخة من العقد</span>
+                               </button>
+                               <a href="#"  class="main_btn_bg">
+                                    <i class="fa-regular fa-building"></i>
+                                    <span>متابعة المشروع </span>
+                               </a>
+                               <a href="#" class="main_btn_bg">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                    <span>العودة للوحة التحكم</span>
+                               </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="../../public/assets/js/customer/payment.js"></script>
+</body>
+</html>

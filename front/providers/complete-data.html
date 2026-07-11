@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Data</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../public/assets/css/style.css">
+    <link rel="stylesheet" href="../../public/assets/css/customer/customer.css">
+
+
+</head>
+<body>
+
+
+     <div class="auth_page">
+        <div class="wrapper complete">
+
+           <div class="logo">
+                <img src="{{ asset('assets/images/auth/logo_auth.png') }}" alt="">
+            </div>
+
+             <div class="form_box ">
+                <form action="" method="POST">
+                    <h2 class="mb-4">إستكمال بياناتك</h2>
+
+                    <!-- Step One Content -->
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="input_group">
+                                <label for="company_name">*اسم الشركة/المؤسسة</label>
+                                <input type="text"  name="company_name" id="company_name" placeholder="اسم الشركة/المؤسسة" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="input_group">
+                                <label for="legal_entity_type">نوع الكيان القانوني*</label>
+                                <select name="legal_entity_type" id="legal_entity_type" required >
+                                    <option value="" disabled selected >نوع الكيان</option>
+                                    <option value="1" {{ old('legal_entity_type') == 1 ? 'selected' : '' }}>test 1</option>
+                                    <option value="2" {{ old('legal_entity_type') == 2 ? 'selected' : '' }}>test_2</option>
+                                    <option value="3" {{ old('legal_entity_type') == 3 ? 'selected' : '' }}>test_3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="input_group">
+                                <label for="owner_id">*رقم الهوية/القامة للمالك</label>
+                                <input type="text" name="owner_id" id="owner_id" placeholder="1234567890" required >
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="input_group">
+                                <label for="commercial_registration">*رقم السجل التجاري</label>
+                                <input type="text" name="commercial_registration" id="commercial_registration" placeholder="1234567890" required >
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="input_group">
+                                <label for="phone">رقم الهاتف المحمول*</label>
+                                <input  type="text" name="phone_number" id="phone_number" placeholder="+966 50 123 4567" required >
+                                <button class="confirm_phone">التحقق من الهاتف المحمول</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="input_group">
+                                <label for="email">البريد الإلكتروني*</label>
+                                <input  type="email" name="email" id="email" placeholder="example@mail.com" required >
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="input_group">
+                                <label for="password">كلمة المرور*</label>
+                                <input type="password" name="password" id="password" placeholder="أدخل كلمة المرور" required >
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="input_group">
+                                <label for="address">*العنوان الكامل</label>
+                                <input  type="text" name="address" id="address" placeholder="أدخل العنوان التفصيلي" required >
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="input_group">
+                                <label for="city_id">المدينة</label>
+                                <select name="city_id" id="city_input" required>
+                                    <option value="" disabled selected>المدينة</option>
+                                    @foreach($cities as $city)
+                                        <option value="{{ $city->id }}">{{ $city->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="input_group">
+                                <label for="region_id">المنطقة</label>
+                                <select name="region_id" id="region_input" required>
+                                    <option value="" disabled selected>المنطقة</option>
+                                   
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step Two Content -->
+                    <div class="row">
+                        <div class="col-md-4 col-lg-3">
+                            <div class="upload_documents">
+                                <label class="file-label">*صورة من السجل التجاري</label>
+
+                                <label class="upload_documents_box" for="fileInput1">
+                                    <div class="icon">                              
+                                        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M28.8799 20.9V26.2334C28.8799 26.9406 28.5989 27.6189 28.0988 28.119C27.5987 28.6191 26.9205 28.9 26.2132 28.9H7.54655C6.83931 28.9 6.16103 28.6191 5.66093 28.119C5.16083 27.6189 4.87988 26.9406 4.87988 26.2334V20.9" stroke="#9CA3AF" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M23.5465 11.5667L16.8798 4.90002L10.2131 11.5667" stroke="#9CA3AF" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M16.8799 4.90002V20.9" stroke="#9CA3AF" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>  
+                                    </div>
+                                    <p>اسحب الملفات هنا أو انقر للتحميل</p>
+                                    <div class="file-note">PDF, JPG, PNG (حد أقصى 10 ميجابايت)</div>
+                                    <input  type="file" name="image_commercial_registration" id="fileInput1" accept=".jpg,.jpeg,.png,.pdf" style="opacity: 0"  >
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-3">
+                            <div class="upload_documents">
+                                <label class="file-label">*شهادة الزكاة والدخل</label>
+                                <label class="upload_documents_box" for="fileInput2">
+                                    <div class="icon">                              
+                                        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M28.8799 20.9V26.2334C28.8799 26.9406 28.5989 27.6189 28.0988 28.119C27.5987 28.6191 26.9205 28.9 26.2132 28.9H7.54655C6.83931 28.9 6.16103 28.6191 5.66093 28.119C5.16083 27.6189 4.87988 26.9406 4.87988 26.2334V20.9" stroke="#9CA3AF" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M23.5465 11.5667L16.8798 4.90002L10.2131 11.5667" stroke="#9CA3AF" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M16.8799 4.90002V20.9" stroke="#9CA3AF" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>  
+                                    </div>
+                                    <p>اسحب الملفات هنا أو انقر للتحميل</p>
+                                    <div class="file-note">PDF, JPG, PNG (حد أقصى 10 ميجابايت)</div>
+                                    <input type="file" name="zakat_income" id="fileInput2" accept=".jpg,.jpeg,.png,.pdf" style="opacity: 0" >
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-3">
+                            <div class="upload_documents">
+                                <label class="file-label">*شهادة الشتراك في الغرفة التجارية</label>
+                                <label class="upload_documents_box" for="fileInput3">
+                                    <div class="icon">                              
+                                        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M28.8799 20.9V26.2334C28.8799 26.9406 28.5989 27.6189 28.0988 28.119C27.5987 28.6191 26.9205 28.9 26.2132 28.9H7.54655C6.83931 28.9 6.16103 28.6191 5.66093 28.119C5.16083 27.6189 4.87988 26.9406 4.87988 26.2334V20.9" stroke="#9CA3AF" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M23.5465 11.5667L16.8798 4.90002L10.2131 11.5667" stroke="#9CA3AF" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M16.8799 4.90002V20.9" stroke="#9CA3AF" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>  
+                                    </div>
+                                    <p>اسحب الملفات هنا أو انقر للتحميل</p>
+                                    <div class="file-note">PDF, JPG, PNG (حد أقصى 10 ميجابايت)</div>
+                                    <input type="file" name="chamber_certificate" id="fileInput3" accept=".jpg,.jpeg,.png,.pdf" style="opacity: 0"  >
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-3">
+                            <div class="upload_documents">
+                                <label class="file-label">*شهادة السعودة</label>
+                                <label class="upload_documents_box" for="fileInput4">
+                                    <div class="icon">                              
+                                        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M28.8799 20.9V26.2334C28.8799 26.9406 28.5989 27.6189 28.0988 28.119C27.5987 28.6191 26.9205 28.9 26.2132 28.9H7.54655C6.83931 28.9 6.16103 28.6191 5.66093 28.119C5.16083 27.6189 4.87988 26.9406 4.87988 26.2334V20.9" stroke="#9CA3AF" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M23.5465 11.5667L16.8798 4.90002L10.2131 11.5667" stroke="#9CA3AF" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M16.8799 4.90002V20.9" stroke="#9CA3AF" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>  
+                                    </div>
+                                    <p>اسحب الملفات هنا أو انقر للتحميل</p>
+                                    <div class="file-note">PDF, JPG, PNG (حد أقصى 10 ميجابايت)</div>
+                                    <input type="file" name="saudization_certificate" id="fileInput4" accept=".jpg,.jpeg,.png,.pdf" style="opacity: 0"  >
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-3">
+                            <div class="upload_documents">
+                                <label class="file-label">*التأمينات الجتماعية</label>
+                                <label class="upload_documents_box" for="fileInput5">
+                                    <div class="icon">                              
+                                        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M28.8799 20.9V26.2334C28.8799 26.9406 28.5989 27.6189 28.0988 28.119C27.5987 28.6191 26.9205 28.9 26.2132 28.9H7.54655C6.83931 28.9 6.16103 28.6191 5.66093 28.119C5.16083 27.6189 4.87988 26.9406 4.87988 26.2334V20.9" stroke="#9CA3AF" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M23.5465 11.5667L16.8798 4.90002L10.2131 11.5667" stroke="#9CA3AF" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M16.8799 4.90002V20.9" stroke="#9CA3AF" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>  
+                                    </div>
+                                    <p>اسحب الملفات هنا أو انقر للتحميل</p>
+                                    <div class="file-note">PDF, JPG, PNG (حد أقصى 10 ميجابايت)</div>
+                                    <input type="file" name="social_insurance[]" id="fileInput5" accept=".jpg,.jpeg,.png,.pdf" multiple style="opacity: 0" >
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-3">
+                            <div class="upload_documents">
+                                <label class="file-label">*شهادة العنوان الوطني</label>
+                                <label class="upload_documents_box" for="fileInput6">
+                                    <div class="icon">                              
+                                        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M28.8799 20.9V26.2334C28.8799 26.9406 28.5989 27.6189 28.0988 28.119C27.5987 28.6191 26.9205 28.9 26.2132 28.9H7.54655C6.83931 28.9 6.16103 28.6191 5.66093 28.119C5.16083 27.6189 4.87988 26.9406 4.87988 26.2334V20.9" stroke="#9CA3AF" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M23.5465 11.5667L16.8798 4.90002L10.2131 11.5667" stroke="#9CA3AF" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M16.8799 4.90002V20.9" stroke="#9CA3AF" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>  
+                                    </div>
+                                    <p>اسحب الملفات هنا أو انقر للتحميل</p>
+                                    <div class="file-note">PDF, JPG, PNG (حد أقصى 10 ميجابايت)</div>
+                                    <input type="file" name="national_address" id="fileInput6" accept=".jpg,.jpeg,.png"  style="opacity: 0" >
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-3">
+                            <div class="upload_documents">
+                                <label class="file-label">*التراخيص المهنية</label>
+                                <label class="upload_documents_box" for="fileInput7">
+                                    <div class="icon">                              
+                                        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M28.8799 20.9V26.2334C28.8799 26.9406 28.5989 27.6189 28.0988 28.119C27.5987 28.6191 26.9205 28.9 26.2132 28.9H7.54655C6.83931 28.9 6.16103 28.6191 5.66093 28.119C5.16083 27.6189 4.87988 26.9406 4.87988 26.2334V20.9" stroke="#9CA3AF" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M23.5465 11.5667L16.8798 4.90002L10.2131 11.5667" stroke="#9CA3AF" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M16.8799 4.90002V20.9" stroke="#9CA3AF" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>  
+                                    </div>
+                                    <p>اسحب الملفات هنا أو انقر للتحميل</p>
+                                    <div class="file-note">PDF, JPG, PNG (حد أقصى 10 ميجابايت)</div>
+                                    <input type="file" name="professional_licenses[]" id="fileInput7" accept=".jpg,.jpeg,.png,.pdf" multiple style="opacity: 0" >
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Step Three Content -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="specialization-options">
+                                <p>:تحديد مجالت التخصص (اختيار متعدد)</p>
+                                <div class="row">
+                                    @foreach ($specializations as $specialization)
+                                    <div class="col-6 col-md-4">
+                                        <input type="checkbox" id="sp{{ $specialization->id }}" name="specializations[]" value="{{ $specialization->id }}" hidden />
+                                        <label class="specialization-box" for="sp{{ $specialization->id }}">{{ $specialization->name }}</label>
+                                    </div>
+                                    @endforeach
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="select_location">
+                                <h6>تحديد نطاق العمل الجغرافي</h6>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="input_group">
+                                            <label for="city_id">المدن</label>
+                                            <select id="city_id" name="city_id[]" class="form-control" multiple required>
+                                                @foreach ($cities as $city)
+                                                    <option value="{{ $city->id }}">{{ $city->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input_group">
+                                            <label for="region_id">المناطق</label>
+                                            <select id="region_id" name="region_id[]" class="form-control" multiple required>
+                                            
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <button type="submit" class="main_bg">إرسال</button>
+
+
+                </form>
+            </div>
+
+        
+        </div>
+                
+        <img src="{{ asset('assets/images/auth/bg_auth.png') }}" alt="" class="bg_auth d-none d-lg-block">
+
+
+    </div>
+
+
+
+
+
+    
+</body>
+</html>

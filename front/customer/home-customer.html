@@ -1,0 +1,360 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Board</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../public/assets/css/customer/customer.css">
+
+</head>
+<body>
+
+
+    <header>
+        <div class="left">
+            <div class="logo">
+                <img src="./images/logo.png" alt="logo">
+                <div class="text">
+                    <h6>منصة المقاولين</h6>
+                    <span>نظام إدارة شامل</span>
+                </div>
+            </div>
+            <div class="close_bar">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 2L6 14M5.2 2L10.8 2C11.9201 2 12.4802 2 12.908 2.21799C13.2843 2.40973 13.5903 2.71569 13.782 3.09202C14 3.51984 14 4.0799 14 5.2L14 10.8C14 11.9201 14 12.4802 13.782 12.908C13.5903 13.2843 13.2843 13.5903 12.908 13.782C12.4802 14 11.9201 14 10.8 14L5.2 14C4.07989 14 3.51984 14 3.09202 13.782C2.71569 13.5903 2.40973 13.2843 2.21799 12.908C2 12.4802 2 11.9201 2 10.8L2 5.2C2 4.07989 2 3.51984 2.21799 3.09202C2.40973 2.71569 2.71569 2.40973 3.09202 2.21799C3.51984 2 4.0799 2 5.2 2Z" stroke="#111111" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>      
+            </div>
+            <div class="input_group">
+                <input type="search" name="project-search" placeholder="...البحث في المشاريع والعروض">
+                <div class="search_icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="#9CA3AF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M17.5013 17.5013L13.918 13.918" stroke="#9CA3AF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <a href="add-project/project-step.html" class="add_project_btn main_btn_bg">
+                <span>مشروع جديد</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.9987 3.33203V12.6654M3.33203 7.9987H12.6654" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+
+            <div class="user">
+                <div class="userimg">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.6654 14V12.6667C12.6654 11.9594 12.3844 11.2811 11.8843 10.781C11.3842 10.281 10.7059 10 9.9987 10H5.9987C5.29145 10 4.61318 10.281 4.11308 10.781C3.61298 11.2811 3.33203 11.9594 3.33203 12.6667V14" stroke="#3C3F47" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7.9987 7.33333C9.47146 7.33333 10.6654 6.13943 10.6654 4.66667C10.6654 3.19391 9.47146 2 7.9987 2C6.52594 2 5.33203 3.19391 5.33203 4.66667C5.33203 6.13943 6.52594 7.33333 7.9987 7.33333Z" stroke="#3C3F47" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <a href="#" class="name">
+                    <h6>أحمد الراشد</h6>
+                    <p class="email">AhmedR1@mail.com</p>
+                </a>
+                <div class="icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6L8 10L12 6" stroke="#6B7280" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+    <aside>
+        <ul>
+            <li>
+                <a href="#">
+                    <span>لوحة التحكم</span>
+                    <i class="fa-regular fa-house"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>مشاريعي</span>
+                    <i class="fa-regular fa-folder-open"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>المدفوعات</span>
+                    <i class="fa-regular fa-credit-card"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>الإشعارات</span>
+                    <i class="fa-regular fa-bell"></i>
+                </a>
+            </li>
+        </ul>
+
+        <button class="logout">
+            <span>تسجيل الخروج</span>
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
+    </aside>
+
+
+
+    <div class="content_user_board">
+
+
+        <div class="head ">
+            <div class="text">
+                <h3>لوحه التحكم</h3>
+                <p>يمكنك تتبع المقاييس الرئيسية وقياسها وتحسينها لتعزيز رضا العملاء ودفع النمو.</p>
+            </div>
+
+                
+                <div class="dropdown-container">
+                    <div class="dropdown-button" id="dropdownButton">
+                       <i class="fa-solid fa-caret-down icon"></i>
+                        <div class="dropdown-text">
+                            <span class="label">عرض:</span>
+                            <span id="selectedText">هذا الشهر</span>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <div class="dropdown-item selected" data-value="هذا الشهر">هذا الشهر</div>
+                        <div class="dropdown-item" data-value="هذا الاسبوع">هذا الاسبوع</div>
+                        <div class="dropdown-item" data-value="هذا اليوم">هذا اليوم</div>
+                    </div>
+                </div>
+
+ 
+        </div>
+
+
+
+
+        <div class="projects_info ">
+            <div class="box">
+                <h6>إجمالي المشاريع</h6>
+                <div class="date">
+                    <span>0</span>
+                    <p>منذ الشهر الماضي</p>
+                </div>
+                <div class="dot">...</div>
+            </div>
+            <div class="box">
+                <h6>إجمالي المشاريع</h6>
+                <div class="date">
+                    <span>0</span>
+                    <p>منذ الشهر الماضي</p>
+                </div>
+                <div class="dot">...</div>
+            </div>
+            <div class="box">
+                <h6>إجمالي المشاريع</h6>
+                <div class="date">
+                    <span>0</span>
+                    <p>منذ الشهر الماضي</p>
+                </div>
+                <div class="dot">...</div>
+            </div>
+            <div class="box">
+                <h6>إجمالي المشاريع</h6>
+                <div class="date">
+                    <span>0</span>
+                    <p>منذ الشهر الماضي</p>
+                </div>
+                <div class="dot">...</div>
+            </div>
+        </div> 
+
+
+
+        <div class="user_projects">
+
+            <div class="head">
+                <div class="projects_number">
+                    <h5>مشاريعي  <span>(0)</span> </h5>
+                    <p>قائمة بجميع مشاريعك وحالة التنفيذ الحالية</p>
+                </div>
+
+                <!-- Search and filter -->
+                <form action="" method="POST" class="d-flex gap-3">
+                    <!-- filter -->
+                    <div class="input_group">
+                        <select name="project_filter" id="project_filter">
+                            <option value="all">الكل</option>
+                            <option value="active">نشطة</option>
+                            <option value="completed">منتهية</option>
+                        </select>
+                    </div>
+                    <!-- Search  -->
+                    <div class="input_group">
+                        <input type="search" name="project_search" id="project_search" placeholder="...البحث في المشاريع والعروض">
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="no_projects ">
+                <h5>لا يوجد مشاريع حالية, ابدأ مشروعًا جديدًا</h5>
+                <p>نوفر لك أفضل المقاولين المعتمدين في المملكة العربية السعودية، مع ضمان أعلى معايير الجودة <br> والشفافية في كل خطوة من مراحل التنفيذ.</p>
+                <a href="add-project/project-step.html" class="add_project_btn main_btn_bg">
+                    <span>ابدأ مشروعك الآن</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.9987 3.33203V12.6654M3.33203 7.9987H12.6654" stroke="#F5932E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+
+
+            <div class="projects">
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="project_user">
+                            <div class="status">
+                                <span class="pending">تم تعيين استشاري للمعاينة</span>
+                                <span class="complete d-none">مكتمل</span>
+                            </div>
+                            <h4 class="project_name">مجمع سكني فاخر - المرحلة الثانية</h4>
+                            <p class="description">مول تجاري متعدد الطوابق مع مساحات تجارية ومنطقة طعام ومرافق ترفيهية.</p>
+                            <div class="categotes">
+                                <div>
+                                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.66797 5.16797H4.6738M1.16797 3.53463L1.16797 6.14477C1.16797 6.43012 1.16797 6.5728 1.2002 6.70707C1.22878 6.82611 1.27592 6.93992 1.33989 7.0443C1.41204 7.16204 1.51293 7.26292 1.7147 7.4647L6.18807 11.9381C6.8811 12.6311 7.22761 12.9776 7.62719 13.1074C7.97866 13.2216 8.35727 13.2216 8.70875 13.1074C9.10832 12.9776 9.45484 12.6311 10.1479 11.9381L11.4381 10.6479C12.1311 9.95484 12.4776 9.60832 12.6074 9.20875C12.7216 8.85727 12.7216 8.47866 12.6074 8.12719C12.4776 7.72761 12.1311 7.3811 11.4381 6.68807L6.9647 2.2147C6.76292 2.01293 6.66204 1.91204 6.5443 1.83989C6.43992 1.77592 6.32611 1.72878 6.20707 1.7002C6.0728 1.66797 5.93012 1.66797 5.64477 1.66797L3.03464 1.66797C2.38124 1.66797 2.05454 1.66797 1.80498 1.79513C1.58546 1.90698 1.40698 2.08546 1.29513 2.30498C1.16797 2.55454 1.16797 2.88124 1.16797 3.53463ZM4.95964 5.16797C4.95964 5.32905 4.82905 5.45964 4.66797 5.45964C4.50689 5.45964 4.3763 5.32905 4.3763 5.16797C4.3763 5.00689 4.50689 4.8763 4.66797 4.8763C4.82905 4.8763 4.95964 5.00689 4.95964 5.16797Z" stroke="#616171" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>بناء جديد</span>
+                                </div>
+                                <div>
+                                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.66797 5.16797H4.6738M1.16797 3.53463L1.16797 6.14477C1.16797 6.43012 1.16797 6.5728 1.2002 6.70707C1.22878 6.82611 1.27592 6.93992 1.33989 7.0443C1.41204 7.16204 1.51293 7.26292 1.7147 7.4647L6.18807 11.9381C6.8811 12.6311 7.22761 12.9776 7.62719 13.1074C7.97866 13.2216 8.35727 13.2216 8.70875 13.1074C9.10832 12.9776 9.45484 12.6311 10.1479 11.9381L11.4381 10.6479C12.1311 9.95484 12.4776 9.60832 12.6074 9.20875C12.7216 8.85727 12.7216 8.47866 12.6074 8.12719C12.4776 7.72761 12.1311 7.3811 11.4381 6.68807L6.9647 2.2147C6.76292 2.01293 6.66204 1.91204 6.5443 1.83989C6.43992 1.77592 6.32611 1.72878 6.20707 1.7002C6.0728 1.66797 5.93012 1.66797 5.64477 1.66797L3.03464 1.66797C2.38124 1.66797 2.05454 1.66797 1.80498 1.79513C1.58546 1.90698 1.40698 2.08546 1.29513 2.30498C1.16797 2.55454 1.16797 2.88124 1.16797 3.53463ZM4.95964 5.16797C4.95964 5.32905 4.82905 5.45964 4.66797 5.45964C4.50689 5.45964 4.3763 5.32905 4.3763 5.16797C4.3763 5.00689 4.50689 4.8763 4.66797 4.8763C4.82905 4.8763 4.95964 5.00689 4.95964 5.16797Z" stroke="#616171" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>سكني</span>
+                                </div>
+                            </div>
+                            <div class="progress_Rate">
+                                <div class="text">
+                                    <span>نسبة الإنجاز</span>
+                                    <p>60%</p>
+                                </div>
+                                <div class="progress" >
+                                    <div class="count" style="width: 60%;"></div>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <div class="provider">
+                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.9987 1.83203C9.9987 3.16536 10.6139 6.02672 10.6654 8.4987C10.6139 10.9707 9.9987 13.832 7.9987 15.1654M7.9987 1.83203C5.9987 3.16536 5.38353 6.02672 5.33203 8.4987C5.38353 10.9707 5.9987 13.832 7.9987 15.1654M7.9987 1.83203C4.3168 1.83203 1.33203 4.8168 1.33203 8.4987M7.9987 1.83203C11.6806 1.83203 14.6654 4.8168 14.6654 8.4987M7.9987 15.1654C11.6806 15.1654 14.6654 12.1806 14.6654 8.4987M7.9987 15.1654C4.3168 15.1654 1.33203 12.1806 1.33203 8.4987M14.6654 8.4987C13.332 10.4987 10.4707 11.1139 7.9987 11.1654C5.52672 11.1139 2.66536 10.4987 1.33203 8.4987M14.6654 8.4987C13.332 6.4987 10.4707 5.88353 7.9987 5.83203C5.52672 5.88353 2.66536 6.4987 1.33203 8.4987" stroke="#9CA3AF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>المقاول : </span>
+                                    <p>شركة البناء المتقدم</p>
+                                </div>
+                                <div class="start">
+                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_2116_5094)">
+                                    <path d="M5.33203 1.83203V4.4987" stroke="#9CA3AF" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M10.668 1.83203V4.4987" stroke="#9CA3AF" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.6667 3.16797H3.33333C2.59695 3.16797 2 3.76492 2 4.5013V13.8346C2 14.571 2.59695 15.168 3.33333 15.168H12.6667C13.403 15.168 14 14.571 14 13.8346V4.5013C14 3.76492 13.403 3.16797 12.6667 3.16797Z" stroke="#9CA3AF" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 7.16797H14" stroke="#9CA3AF" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_2116_5094">
+                                    <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    <span>البدء : </span>
+                                    <p>2 يوليو 2025 - 2 يوليو 2026</p>
+                                </div>
+                                <div class="pudget">
+                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_2116_5105)">
+                                    <path d="M8 1.83203V15.1654" stroke="#9CA3AF" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M11.3333 3.83203H6.33333C5.71449 3.83203 5.121 4.07786 4.68342 4.51545C4.24583 4.95303 4 5.54653 4 6.16536C4 6.7842 4.24583 7.3777 4.68342 7.81528C5.121 8.25287 5.71449 8.4987 6.33333 8.4987H9.66667C10.2855 8.4987 10.879 8.74453 11.3166 9.18212C11.7542 9.6197 12 10.2132 12 10.832C12 11.4509 11.7542 12.0444 11.3166 12.4819C10.879 12.9195 10.2855 13.1654 9.66667 13.1654H4" stroke="#9CA3AF" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_2116_5105">
+                                    <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    <p>25,000,000</p>
+                                    <span> ريال</span>
+                                </div>  
+                                <div class="location">
+                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_2116_5114)">
+                                    <path d="M13.3346 7.16536C13.3346 11.1654 8.0013 15.1654 8.0013 15.1654C8.0013 15.1654 2.66797 11.1654 2.66797 7.16536C2.66797 5.75088 3.22987 4.39432 4.23007 3.39413C5.23026 2.39393 6.58681 1.83203 8.0013 1.83203C9.41579 1.83203 10.7723 2.39393 11.7725 3.39413C12.7727 4.39432 13.3346 5.75088 13.3346 7.16536Z" stroke="#9CA3AF" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8 9.16797C9.10457 9.16797 10 8.27254 10 7.16797C10 6.0634 9.10457 5.16797 8 5.16797C6.89543 5.16797 6 6.0634 6 7.16797C6 8.27254 6.89543 9.16797 8 9.16797Z" stroke="#9CA3AF" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_2116_5114">
+                                    <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    <span>الرياض،</span>
+                                    <p>حي النرجس</p>
+                                </div>
+                            </div>
+                            <div class="last">
+                                <div class="buttons">
+                                    <a href="#" class="main_btn_bg order_status ">متابعة حالة الطلب</a>
+                                    <a href="#" class="main_btn_bg show_details d-none">عرض التفاصيل</a>
+                                    <a href="#" class="main_btn_bg show_details d-none">عرض العروض</a>
+                                    <a href="#" class="main_btn_bg update d-none">تعديل</a>
+                                    <a href="#" class="main_btn_bg  project_rating d-none">
+                                        <span>تقييم المشروع</span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2116_9150)">
+                                        <path d="M7.9987 1.33203L10.0587 5.50536L14.6654 6.1787L11.332 9.42537L12.1187 14.012L7.9987 11.8454L3.8787 14.012L4.66536 9.42537L1.33203 6.1787L5.9387 5.50536L7.9987 1.33203Z" stroke="#047857" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_2116_9150">
+                                        <rect width="16" height="16" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="offers d-none">
+                                    <span>3</span>
+                                    <p> عرض مقدم</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+    <!-- End content_user_board  -->
+    </div>
+
+
+
+<script src="./customer.js"></script>
+
+    
+</body>
+</html>

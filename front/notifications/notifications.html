@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+
+    
+     <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../public/assets/css/customer/customer.css">
+
+
+</head>
+<body>
+
+
+
+
+    
+    <header>
+        <div class="left">
+            <div class="logo">
+                <img src="/public/assets/images/home/main_logo.png" alt="logo">
+                <div class="text">
+                    <h6>منصة المقاولين</h6>
+                    <span>نظام إدارة شامل</span>
+                </div>
+            </div>
+            <div class="close_bar">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 2L6 14M5.2 2L10.8 2C11.9201 2 12.4802 2 12.908 2.21799C13.2843 2.40973 13.5903 2.71569 13.782 3.09202C14 3.51984 14 4.0799 14 5.2L14 10.8C14 11.9201 14 12.4802 13.782 12.908C13.5903 13.2843 13.2843 13.5903 12.908 13.782C12.4802 14 11.9201 14 10.8 14L5.2 14C4.07989 14 3.51984 14 3.09202 13.782C2.71569 13.5903 2.40973 13.2843 2.21799 12.908C2 12.4802 2 11.9201 2 10.8L2 5.2C2 4.07989 2 3.51984 2.21799 3.09202C2.40973 2.71569 2.71569 2.40973 3.09202 2.21799C3.51984 2 4.0799 2 5.2 2Z" stroke="#111111" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>      
+            </div>
+            <div class="input_group">
+                <input type="search" name="project-search" placeholder="...البحث في المشاريع والعروض">
+                <div class="search_icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="#9CA3AF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M17.5013 17.5013L13.918 13.918" stroke="#9CA3AF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <a href="add-project/project-step.html" class="add_project_btn main_btn_bg">
+                <span>مشروع جديد</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.9987 3.33203V12.6654M3.33203 7.9987H12.6654" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+
+            <div class="user">
+                <div class="userimg">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.6654 14V12.6667C12.6654 11.9594 12.3844 11.2811 11.8843 10.781C11.3842 10.281 10.7059 10 9.9987 10H5.9987C5.29145 10 4.61318 10.281 4.11308 10.781C3.61298 11.2811 3.33203 11.9594 3.33203 12.6667V14" stroke="#3C3F47" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7.9987 7.33333C9.47146 7.33333 10.6654 6.13943 10.6654 4.66667C10.6654 3.19391 9.47146 2 7.9987 2C6.52594 2 5.33203 3.19391 5.33203 4.66667C5.33203 6.13943 6.52594 7.33333 7.9987 7.33333Z" stroke="#3C3F47" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <a href="#" class="name">
+                    <h6>أحمد الراشد</h6>
+                    <p class="email">AhmedR1@mail.com</p>
+                </a>
+                <div class="icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6L8 10L12 6" stroke="#6B7280" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+     <aside class="">
+        <ul>
+            <li>
+                <a href="#">
+                    <span>لوحة التحكم</span>
+                    <i class="fa-regular fa-house"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>مشاريعي</span>
+                    <i class="fa-regular fa-folder-open"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>المدفوعات</span>
+                    <i class="fa-regular fa-credit-card"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>الإشعارات</span>
+                    <i class="fa-regular fa-bell"></i>
+                </a>
+            </li>
+        </ul>
+
+        <button class="logout">
+            <span>تسجيل الخروج</span>
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
+    </aside>
+
+
+
+
+    <div class="notifications">
+        <div class="section-header ">
+            <!-- <div class="d-flex justify-content-between"> -->
+                <p>مركز الإشعارات</p>
+        
+                <form action="" method="POST">
+                    <div class="input_group">
+                        <input type="search" placeholder="البحث في الإشعارات...">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </form>
+
+                <!-- <div class="d-flex justify-content-between"> -->
+                    <button class="main_btn_bg">
+                        <svg width="25" height="17" viewBox="0 0 25 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_2136_14420)">
+                                <path
+                                    d="M23.4662 8.18215V8.79548C23.4653 10.2331 22.9998 11.6319 22.139 12.7834C21.2783 13.9348 20.0683 14.7771 18.6897 15.1847C17.3111 15.5924 15.8377 15.5434 14.4891 15.0452C13.1406 14.547 11.9892 13.6262 11.2068 12.4202C10.4243 11.2142 10.0527 9.78753 10.1473 8.35303C10.2419 6.91853 10.7976 5.55303 11.7317 4.4602C12.6657 3.36736 13.928 2.60574 15.3303 2.28891C16.7325 1.97209 18.1997 2.11704 19.5128 2.70215"
+                                    stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M14.8008 8.1276L16.8008 10.1276L23.4674 3.46094" stroke="white"
+                                    stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_2136_14420">
+                                    <rect width="16" height="16" fill="white" transform="translate(8.80078 0.796875)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span>تحديد الكل كمقروء</span>
+                    </button>    
+                <!-- </div>   -->
+            <!-- </div> -->
+        </div>
+        <div class="box accepted ">
+            <div class="d-flex justify-content-between">
+                <div class=" d-flex">
+                    <div class="img">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M22 11.4763V12.3963C21.9988 14.5528 21.3005 16.651 20.0093 18.3782C18.7182 20.1053 16.9033 21.3688 14.8354 21.9802C12.7674 22.5917 10.5573 22.5182 8.53447 21.7709C6.51168 21.0236 4.78465 19.6424 3.61096 17.8334C2.43727 16.0244 1.87979 13.8844 2.02168 11.7327C2.16356 9.58091 2.99721 7.53268 4.39828 5.89342C5.79935 4.25417 7.69279 3.11173 9.79619 2.63649C11.8996 2.16126 14.1003 2.37869 16.07 3.25635"
+                                stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M9 11.3984L12 14.3984L22 4.39844" stroke="#059669" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <p class="title-card">تم قبول عرضك</p>
+                </div>
+                <span class="time"> 7:15 م</span>
+            </div>
+
+
+            <p class="start-text">تم قبول عرض السعر الخاص بك لمشروع المجمع السكني الفاخر. يرجى مراجعة تفاصيل العقد.</p>
+            <p class="look">عرض التفاصيل ←</p>
+        </div>
+        <div class="box new-project ">
+            <div class="d-flex justify-content-between">
+                <div class=" d-flex">
+                    <div class="wrong">
+
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 22.2969C17.5228 22.2969 22 17.8197 22 12.2969C22 6.77403 17.5228 2.29688 12 2.29688C6.47715 2.29688 2 6.77403 2 12.2969C2 17.8197 6.47715 22.2969 12 22.2969Z"
+                                stroke="#F5932E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M12 16.2969V12.2969" stroke="#F5932E" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M12 8.29688H12.01" stroke="#F5932E" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <p class="title-card">مشروع جديد متاح</p>
+                </div>
+                <span class="time"> 5:30 م</span>
+
+            </div>
+            <p class="start-text">يوجد مشروع جديد يناسب تخصصك في منطقة الرياض. قيمة المشروع 5 مليون ريال.</p>
+            <p class="look">عرض التفاصيل ←</p>
+        </div>
+        <div class="box required ">
+            <div class="d-flex justify-content-between">
+                <div class=" d-flex">
+                    <div class="over">
+                         @elseif(str_contains($notification->title, 'تحديث المستندات')) @elseif(str_contains($notification->title, 'تحديث المستندات'))
+                    </div>
+                    <p class="title-card">مطلوب تحديث المستندات</p>
+                </div>
+                <span class="time">6:21 ص</span>
+
+            </div>
+            <p class="start-text">شهادة الزكاة والدخل الخاصة بك ستنتهي خلال 30 يوم. يرجى تحديثها.</p>
+            <p class="look">عرض التفاصيل ←</p>
+        </div>
+        <div class="box to-receive ">
+            <div class="d-flex justify-content-between">
+                <div class=" d-flex">
+                    <div class="img">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M22 11.4763V12.3963C21.9988 14.5528 21.3005 16.651 20.0093 18.3782C18.7182 20.1053 16.9033 21.3688 14.8354 21.9802C12.7674 22.5917 10.5573 22.5182 8.53447 21.7709C6.51168 21.0236 4.78465 19.6424 3.61096 17.8334C2.43727 16.0244 1.87979 13.8844 2.02168 11.7327C2.16356 9.58091 2.99721 7.53268 4.39828 5.89342C5.79935 4.25417 7.69279 3.11173 9.79619 2.63649C11.8996 2.16126 14.1003 2.37869 16.07 3.25635"
+                                stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M9 11.3984L12 14.3984L22 4.39844" stroke="#059669" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <p class="title-card">تم استلام الدفعة</p>
+                </div>
+                <span class="time">4:21 ص</span>
+            </div>
+
+
+            <p class="start-text">تم تحويل دفعة بقيمة 750,000 ريال إلى حسابك البنكي لمشروع المجمع التجاري.</p>
+            <p class="look">عرض التفاصيل ←</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

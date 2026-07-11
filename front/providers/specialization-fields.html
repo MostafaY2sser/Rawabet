@@ -1,0 +1,150 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specialization Fields</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../public/assets/css/style.css">
+
+
+</head>
+<body>
+
+
+
+      <div class="auth_page">
+        <div class="wrapper rejester">
+
+            <div class="logo">
+                <img src="../images/logo_auth.png" alt="">
+            </div>
+
+             <div class="form_box ">
+                <form action="" method="POST">
+                    <h2>إنشاء حساب جديد كمزود خدمة</h2>
+
+                    <!-- Stepper -->
+                    <div class="stepper  mx-0 mx-md-5">
+                        <div class="step active">
+                            <div class="circle">
+                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.1673 7.38723V8.00056C15.1665 9.43818 14.701 10.837 13.8402 11.9884C12.9794 13.1399 11.7695 13.9822 10.3909 14.3898C9.01227 14.7974 7.53882 14.7485 6.1903 14.2503C4.84177 13.7521 3.69042 12.8313 2.90796 11.6253C2.1255 10.4192 1.75385 8.9926 1.84844 7.5581C1.94303 6.1236 2.49879 4.75811 3.43284 3.66528C4.36689 2.57244 5.62917 1.81082 7.03144 1.49399C8.43371 1.17717 9.90083 1.32212 11.214 1.90723" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.5 7.33268L8.5 9.33268L15.1667 2.66602" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="label">البيانات الأساسية</div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="step active">
+                            <div class="circle">
+                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.1673 7.38723V8.00056C15.1665 9.43818 14.701 10.837 13.8402 11.9884C12.9794 13.1399 11.7695 13.9822 10.3909 14.3898C9.01227 14.7974 7.53882 14.7485 6.1903 14.2503C4.84177 13.7521 3.69042 12.8313 2.90796 11.6253C2.1255 10.4192 1.75385 8.9926 1.84844 7.5581C1.94303 6.1236 2.49879 4.75811 3.43284 3.66528C4.36689 2.57244 5.62917 1.81082 7.03144 1.49399C8.43371 1.17717 9.90083 1.32212 11.214 1.90723" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.5 7.33268L8.5 9.33268L15.1667 2.66602" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="label">رفع الستندات الرسمية</div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="step active">
+                            <div class="circle">3</div>
+                            <div class="label">تحديد مجالات التخصص</div>
+                        </div>
+                    </div>
+
+                    <p class="complete_data">أكمل بياناتك لتتمكن من استخدام جميع خدمات المنصة</p>
+
+                    <div class="specialization-options">
+                        <p>:تحديد مجالات التخصص (اختيار متعدد)</p>
+                        <div class="row">
+                            <div class="col-6 col-md-4">
+                                <input type="checkbox" id="sp1" name="specializations[]" value="new_building" hidden />
+                                <label class="specialization-box" for="sp1">تشطيب</label>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <input type="checkbox" id="sp2" name="specializations[]" value="renovation" hidden />
+                                <label class="specialization-box" for="sp2">ترميم</label>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <input type="checkbox" id="sp3" name="specializations[]" value="finishing" hidden />
+                                <label class="specialization-box" for="sp3">بناء جديد</label>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <input type="checkbox" id="sp4" name="specializations[]" value="new_building" hidden />
+                                <label class="specialization-box" for="sp4">أخرى</label>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <input type="checkbox" id="sp5" name="specializations[]" value="renovation" hidden />
+                                <label class="specialization-box" for="sp5">تعديلات</label>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <input type="checkbox" id="sp6" name="specializations[]" value="finishing" hidden />
+                                <label class="specialization-box" for="sp6">هدم</label>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="select_location">
+                        <h6>تحديد نطاق العمل الجغرافي</h3>
+                         <div class="row">
+                            <div class="col-md-6">
+                                <div class="input_group">
+                                    <label for="area">المنطقة</label>
+                                    <select name="area" id="area" required>
+                                        <option value="" disabled selected>المنطقة</option>
+                                        <option value="1">الرياض</option>
+                                        <option value="2">جدة</option>
+                                        <option value="3">الدمام</option>
+                                        <option value="4">مكة المكرمة</option>
+                                        <option value="5">المدينة المنورة</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                            <div class="input_group">
+                                <label for="city">المدينة</label>
+                                <select name="city" id="city" required>
+                                    <option value="" disabled selected>المدينة</option>
+                                    <option value="1">الرياض</option>
+                                    <option value="2">الرياض</option>
+                                    <option value="3">جدة</option>
+                                    <option value="4">الدمام</option>
+                                    <option value="5">مكة المكرمة</option>
+                                    <option value="6">المدينة المنورة</option>
+                                </select>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="main_bg">التالي</button>
+
+                    <a href="#" class="back_step mt-0">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.832 8.5H3.16537M3.16537 8.5L7.16536 4.5M3.16537 8.5L7.16536 12.5" stroke="#0C0C0C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        السابق
+                    </a>
+
+                </form>
+            </div>
+
+            <p class="hava_account mt-3">
+                لديك حساب بالفعل؟  <a href="#">قم بتسجيل الدخول</a>
+            </p>
+
+
+        </div>
+        <img src="../images/bg_auth.png" alt="" class="bg_auth d-none d-lg-block">
+
+    </div>
+
+
+    
+</body>
+</html>

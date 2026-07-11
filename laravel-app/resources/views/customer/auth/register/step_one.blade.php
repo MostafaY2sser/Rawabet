@@ -1,0 +1,83 @@
+@extends('customer.layouts.auth')
+@section('title')
+إنشاء حساب جديد
+@endsection
+@section('content')
+<div class="auth_page">
+        <div class="wrapper rejester">
+
+            <div class="logo">
+                <img src="{{ asset('images/auth/logo_auth.png') }}" alt="">
+            </div>
+
+             <div class="form_box ">
+                <form action="" method="POST">
+                    <h2>إنشاء حساب جديد</h2>
+
+                    <!-- Stepper -->
+                    <div class="stepper  mx-0 mx-md-5">
+                        <div class="step active">
+                            <div class="circle">1</div>
+                            <div class="label">البيانات الأساسية</div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="step">
+                            <div class="circle">2</div>
+                            <div class="label">التحقق من الهوية</div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="step">
+                            <div class="circle">3</div>
+                            <div class="label">إكمال الملف</div>
+                        </div>
+                    </div>
+
+                    <div class="input_group">
+                        <label for="full_name">الاسم كامل*</label>
+                        <input type="text" name="full_name" id="full_name" placeholder="الاسم كامل" required>
+                    </div>
+                    <div class="input_group">
+                        <label for="national_id">رقم الهوية الوطنية/الإقامة*</label>
+                        <input type="text" name="national_id" id="national_id" placeholder="1234567890" required >
+                    </div>
+                    <div class="input_group">
+                        <label for="phone_number">رقم الهاتف المحمول*</label>
+                        <input type="text" name="phone_number" id="phone_number" placeholder="+966 50 123 4567" required >
+                        <button class="confirm_phone">التحقق من الهاتف المحمول</button>
+                    </div>
+                    <div class="input_group">
+                        <label for="email">البريد الإلكتروني*</label>
+                        <input type="email" name="email" id="email" placeholder="example@mail.com" required >
+                    </div>
+                    <div class="input_group">
+                        <label for="password">كلمة المرور*</label>
+                        <input type="password" name="password" id="password" placeholder="أدخل كلمة مرور قوية" required >
+                    </div>
+                    <div class="input_group">
+                        <label for="confirm_password">تأكيد كلمة المرور*</label>
+                        <input type="password" name="confirm_password" id="confirm_password" placeholder="تأكيد كلمة المرور" required >
+                    </div>
+
+                    <div class="agree_terms">
+                        <label for="agree_terms">
+                            <p>أوافق علي  <a href="#">شرو وأحكام المنصة</a></p>
+                        </label>
+                        <input class="form-check-input" type="checkbox" id="agree_terms" name="agree_terms" required>
+                    </div>
+
+                    <button type="submit" class="main_bg">التالي - التحقق من الهوية</button>
+
+
+                </form>
+            </div>
+
+            <p class="hava_account">
+                لديك حساب بالفعل؟  <a href="#">قم بتسجيل الدخول</a>
+            </p>
+
+
+        </div>
+        <img src="./images/bg_auth.png" alt="" class="bg_auth d-none d-lg-block">
+
+    </div>
+@endsection

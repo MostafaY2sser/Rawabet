@@ -1,0 +1,35 @@
+@extends('customer.layouts.auth')
+@section('content')
+  <div class="auth_page">
+        <div class="wrapper rejester">
+
+            <div class="logo">
+                <img src="../images/logo_auth.png" alt="">
+            </div>
+
+             <div class="form_box ">
+                <form>
+
+                    <div class="submitted_successfully">
+                        <div class="icon">
+                            <svg width="65" height="64" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M58.6358 26.6666C59.8536 32.6434 58.9857 38.8571 56.1767 44.2714C53.3677 49.6857 48.7875 53.9734 43.1998 56.4195C37.6121 58.8655 31.3548 59.3221 25.4712 57.713C19.5877 56.1038 14.4336 52.5264 10.8685 47.5771C7.30341 42.6278 5.54277 36.6059 5.88021 30.5157C6.21766 24.4254 8.63279 18.6349 12.7228 14.1098C16.8129 9.58464 22.3307 6.59845 28.356 5.64918C34.3812 4.69991 40.5499 5.84493 45.8331 8.8933" stroke="#F5932E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M24.5 29.3333L32.5 37.3333L59.1667 10.6666" stroke="#F5932E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h5>تم إرسال طلب الانضمام بنجاح!</h5>
+                        <p>شكراً لك على ثقتك. سيتم مراجعة طلبك والتواصل معك قريباً.</p>
+                        <a  href="/" class="back_home">العودة للرئيسية</button>
+                    </div>
+
+                </form>
+            </div>
+
+          
+        </div>
+        <img src="../images/bg_auth.png" alt="" class="bg_auth d-none d-lg-block">
+
+    </div>
+
+
+    @endsection

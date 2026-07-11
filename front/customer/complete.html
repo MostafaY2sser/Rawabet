@@ -1,0 +1,159 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Data</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../public/assets/css/style.css">
+    <link rel="stylesheet" href="../../public/assets/css/customer/customer.css">
+
+
+</head>
+<body>
+
+
+     <div class="auth_page">
+        <div class="wrapper complete">
+
+           <div class="logo">
+                <img src="{{ asset('assets/images/auth/logo_auth.png') }}" alt="">
+            </div>
+
+             <div class="form_box ">
+                <form action="" method="POST">
+                    <h2 class="mb-4">إستكمال بياناتك</h2>
+
+                    <div class="row">
+
+                        <div class="col-md-6 col-lg-4">
+                            <div class="input_group">
+                                <label for="full_name">الاسم كامل*</label>
+                                <input type="text"  name="full_name" id="full_name" placeholder="الاسم كامل" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="input_group">
+                                <label for="national_id">رقم الهوية الوطنية/الإقامة*</label>
+                                <input type="text" name="national_id" id="national_id" placeholder="1234567890" required >
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                             <div class="input_group">
+                                <label for="phone_number">رقم الهاتف المحمول*</label>
+                                <input type="text" name="phone_number" id="phone_number" placeholder="+966 50 123 4567" required >
+                                <button class="confirm_phone">التحقق من الهاتف المحمول</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                             <div class="input_group">
+                                <label for="email">البريد الإلكتروني*</label>
+                                <input type="email" name="email" id="email" placeholder="example@mail.com" required >
+                            </div>
+                         </div>
+                         <div class="col-md-6 col-lg-4">
+                             <div class="input_group">
+                                <label for="password">كلمة المرور*</label>
+                                <input type="password" name="password" id="password" placeholder="أدخل كلمة مرور قوية" required >
+                            </div>
+                         </div>
+                         <div class="col-md-6 col-lg-4">
+                            <div class="input_group">
+                                <label for="confirm_password">تأكيد كلمة المرور*</label>
+                                <input type="password" name="confirm_password" id="confirm_password" placeholder="تأكيد كلمة المرور" required >
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="input_group">
+                                <label for="full_address">العنوان الكامل*</label>
+                                <input type="text" name="address" id="searchInput" placeholder="أدخل العنوان التفصيلي" required>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-lg-4">
+                            <div class="input_group">
+                                <label for="region">المنطقة</label>
+                                <select name="region_id" id="region_input" required>
+                                    <option  value="" disabled selected>المنطقة</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="input_group">
+                                <label for="city">المدينة</label>
+                                <select name="city_id" id="city_input" required>
+                                    <option  value="" disabled selected>المدينة</option>
+                                        @foreach ($cities as $item)
+                                            <option value="{{ $item->id }}" {{ @old('city_id') == $item->id ? 'selected' : '' }}>{{ $item->name }}</option>
+                                        @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="input_group">
+                                <label for="region">المنطقة</label>
+                                <select name="region_id" id="region_input" required>
+                                    <option  value="" disabled selected>المنطقة</option>
+                                   
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="upload_image">
+                                <label class="file-label">الصورة الشخصية (اختياري)</label>
+
+                                <label class="upload-box" for="fileInput">
+                                    <div class="upload-text">
+                                        <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2116_332)">
+                                        <g clip-path="url(#clip1_2116_332)">
+                                        <path d="M39.0762 23.5742C39.0762 23.457 39.0957 23.3399 39.0957 23.2227C39.0957 16.875 34.0371 11.7383 27.7969 11.7383C23.2949 11.7383 19.4277 14.4141 17.6113 18.2813C16.8203 17.8809 15.9316 17.6465 14.9941 17.6465C12.1133 17.6465 9.71094 19.7852 9.25195 22.5781C5.79492 23.7696 3.32422 27.0801 3.32422 30.9766C3.32422 35.8789 7.24024 39.8633 12.0644 39.8633H22.0742V32.0508H17.3672L25.1992 23.877L33.0312 32.041H28.3242V39.8535H39.0957C43.5097 39.8535 47.0742 36.1914 47.0742 31.709C47.0742 27.2266 43.4902 23.584 39.0762 23.5742Z" fill="#F5932E"/>
+                                        </g>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_2116_332">
+                                        <rect width="50" height="50" fill="white" transform="translate(0.199219 0.800781)"/>
+                                        </clipPath>
+                                        <clipPath id="clip1_2116_332">
+                                        <rect width="50" height="50" fill="white" transform="translate(0.199219 0.800781)"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                        <span>قم بسحب وإفلات الملفات هنا</span>
+                                    </div>
+                                    <button class="upload-btn">اختر الملفات</button>
+                                    <input type="file" id="fileInput" name="personal_image" accept=".jpg,.jpeg,.png" multiple>
+                                </label>
+
+                                <div class="file-note">jpg,jpeg,png</div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <button type="submit" class="main_bg">إرسال</button>
+
+
+                </form>
+            </div>
+
+        
+        </div>
+                
+        <img src="{{ asset('assets/images/auth/bg_auth.png') }}" alt="" class="bg_auth d-none d-lg-block">
+
+
+    </div>
+
+
+
+
+
+    
+</body>
+</html>

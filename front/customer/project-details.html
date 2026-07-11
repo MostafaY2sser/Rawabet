@@ -1,0 +1,748 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Details</title>
+
+
+
+    <!--  fontAwsome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+    
+    <!-- flatpickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    
+    <!-- Custom css -->
+    <link rel="stylesheet" href="../../public/assets/css/customer/customer.css">
+
+
+
+</head>
+<body>
+
+
+    <header>
+        <div class="left">
+            <div class="logo">
+                <img src="./images/logo.png" alt="logo">
+                <div class="text">
+                    <h6>منصة المقاولين</h6>
+                    <span>نظام إدارة شامل</span>
+                </div>
+            </div>
+            <div class="close_bar">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 2L6 14M5.2 2L10.8 2C11.9201 2 12.4802 2 12.908 2.21799C13.2843 2.40973 13.5903 2.71569 13.782 3.09202C14 3.51984 14 4.0799 14 5.2L14 10.8C14 11.9201 14 12.4802 13.782 12.908C13.5903 13.2843 13.2843 13.5903 12.908 13.782C12.4802 14 11.9201 14 10.8 14L5.2 14C4.07989 14 3.51984 14 3.09202 13.782C2.71569 13.5903 2.40973 13.2843 2.21799 12.908C2 12.4802 2 11.9201 2 10.8L2 5.2C2 4.07989 2 3.51984 2.21799 3.09202C2.40973 2.71569 2.71569 2.40973 3.09202 2.21799C3.51984 2 4.0799 2 5.2 2Z" stroke="#111111" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>      
+            </div>
+            <div class="input_group">
+                <input type="search" name="project-search" placeholder="...البحث في المشاريع والعروض">
+                <div class="search_icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="#9CA3AF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M17.5013 17.5013L13.918 13.918" stroke="#9CA3AF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <a href="add-project/project-step.html" class="add_project_btn main_btn_bg">
+                <span>مشروع جديد</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.9987 3.33203V12.6654M3.33203 7.9987H12.6654" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+
+            <div class="user">
+                <div class="userimg">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.6654 14V12.6667C12.6654 11.9594 12.3844 11.2811 11.8843 10.781C11.3842 10.281 10.7059 10 9.9987 10H5.9987C5.29145 10 4.61318 10.281 4.11308 10.781C3.61298 11.2811 3.33203 11.9594 3.33203 12.6667V14" stroke="#3C3F47" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7.9987 7.33333C9.47146 7.33333 10.6654 6.13943 10.6654 4.66667C10.6654 3.19391 9.47146 2 7.9987 2C6.52594 2 5.33203 3.19391 5.33203 4.66667C5.33203 6.13943 6.52594 7.33333 7.9987 7.33333Z" stroke="#3C3F47" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <a href="#" class="name">
+                    <h6>أحمد الراشد</h6>
+                    <p class="email">AhmedR1@mail.com</p>
+                </a>
+                <div class="icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6L8 10L12 6" stroke="#6B7280" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+    <aside>
+        <ul>
+            <li>
+                <a href="#">
+                    <span>لوحة التحكم</span>
+                    <i class="fa-regular fa-house"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>مشاريعي</span>
+                    <i class="fa-regular fa-folder-open"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>المدفوعات</span>
+                    <i class="fa-regular fa-credit-card"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>الإشعارات</span>
+                    <i class="fa-regular fa-bell"></i>
+                </a>
+            </li>
+        </ul>
+
+        <button class="logout">
+            <span>تسجيل الخروج</span>
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
+    </aside>
+
+
+
+
+
+    <div class="project_details">
+
+        <div class="project_info">
+            <div class="head">
+                 <a href="#">
+                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <g clip-path="url(#clip0_2116_5648)">
+                             <path d="M4.16797 10H15.8346" stroke="#4B5563" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                             <path d="M10 4.16797L15.8333 10.0013L10 15.8346" stroke="#4B5563" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_2116_5648">
+                                    <rect width="20" height="20" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    <span>العودة للمشاريع</span>
+                </a>
+                <div class="buttons">
+                    <button class="main_btn_bg  update ">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 2.25H3.75C3.35218 2.25 2.97064 2.40804 2.68934 2.68934C2.40804 2.97064 2.25 3.35218 2.25 3.75V14.25C2.25 14.6478 2.40804 15.0294 2.68934 15.3107C2.97064 15.592 3.35218 15.75 3.75 15.75H14.25C14.6478 15.75 15.0294 15.592 15.3107 15.3107C15.592 15.0294 15.75 14.6478 15.75 14.25V9" stroke="#F5932E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.7813 1.9699C14.0796 1.67153 14.4843 1.50391 14.9063 1.50391C15.3282 1.50391 15.7329 1.67153 16.0313 1.9699C16.3296 2.26827 16.4972 2.67294 16.4972 3.0949C16.4972 3.51685 16.3296 3.92153 16.0313 4.2199L9 11.2511L6 12.0011L6.75 9.00115L13.7813 1.9699Z" stroke="#F5932E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>تعديل الطلب</span>
+                    </button>
+                    <button class="main_btn_bg delete ">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.83464 3.33464C5.83464 2.89261 6.01023 2.46868 6.32279 2.15612C6.63535 1.84356 7.05927 1.66797 7.5013 1.66797H12.5013C12.9433 1.66797 13.3673 1.84356 13.6798 2.15612C13.9924 2.46868 14.168 2.89261 14.168 3.33464V5.0013H17.5013C17.7223 5.0013 17.9343 5.0891 18.0906 5.24538C18.2468 5.40166 18.3346 5.61362 18.3346 5.83464C18.3346 6.05565 18.2468 6.26761 18.0906 6.42389C17.9343 6.58017 17.7223 6.66797 17.5013 6.66797H16.6105L15.888 16.7863C15.858 17.2068 15.6699 17.6003 15.3614 17.8876C15.0529 18.1749 14.647 18.3346 14.2255 18.3346H5.7763C5.35475 18.3346 4.94886 18.1749 4.64037 17.8876C4.33189 17.6003 4.14373 17.2068 4.1138 16.7863L3.39297 6.66797H2.5013C2.28029 6.66797 2.06833 6.58017 1.91205 6.42389C1.75577 6.26761 1.66797 6.05565 1.66797 5.83464C1.66797 5.61362 1.75577 5.40166 1.91205 5.24538C2.06833 5.0891 2.28029 5.0013 2.5013 5.0013H5.83464V3.33464ZM7.5013 5.0013H12.5013V3.33464H7.5013V5.0013ZM5.06297 6.66797L5.77714 16.668H14.2263L14.9405 6.66797H5.06297ZM8.33464 8.33464C8.55565 8.33464 8.76761 8.42243 8.92389 8.57871C9.08017 8.73499 9.16797 8.94695 9.16797 9.16797V14.168C9.16797 14.389 9.08017 14.6009 8.92389 14.7572C8.76761 14.9135 8.55565 15.0013 8.33464 15.0013C8.11362 15.0013 7.90166 14.9135 7.74538 14.7572C7.5891 14.6009 7.5013 14.389 7.5013 14.168V9.16797C7.5013 8.94695 7.5891 8.73499 7.74538 8.57871C7.90166 8.42243 8.11362 8.33464 8.33464 8.33464ZM11.668 8.33464C11.889 8.33464 12.1009 8.42243 12.2572 8.57871C12.4135 8.73499 12.5013 8.94695 12.5013 9.16797V14.168C12.5013 14.389 12.4135 14.6009 12.2572 14.7572C12.1009 14.9135 11.889 15.0013 11.668 15.0013C11.447 15.0013 11.235 14.9135 11.0787 14.7572C10.9224 14.6009 10.8346 14.389 10.8346 14.168V9.16797C10.8346 8.94695 10.9224 8.73499 11.0787 8.57871C11.235 8.42243 11.447 8.33464 11.668 8.33464Z" fill="#F85735"/>
+                        </svg>
+                        <span>حذف الطلب</span>
+                    </button>
+
+                    <!-- add class done  if  change inspection complete  -->
+                    <button class="main_btn_bg  change_inspection ">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span>تغيير موعد المعاينة</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="categors">
+                <div class="status">
+                    <span>قيد الراجعة</span>
+                </div>
+                <div>
+                    <img src="../../public/assets/images/customer/icons/tag-01.png" alt="">
+                    <span>بناء جديد</span>
+                </div>
+                <div>
+                    <img src="../../public/assets/images/customer/icons/tag-01.png" alt="">
+                    <span>سكني</span>
+                </div>
+            </div>
+
+            <h2 class="project_name">إنشاء مجمع تجاري</h2>
+
+            <div class="info">
+                <div>
+                    <span>سنة</span>
+                    <p>مدة الانتهاء المتوقعة:</p>
+                    <img src="../../public/assets/images/customer/icons/culander.png" alt="">
+                </div>
+                <div>
+                    <span>الرياض</span>
+                    <img src="../../public/assets/images/customer/icons/location.png" alt="">
+                </div>
+                <div>
+                    <p>ريال</p>
+                    <span>15,000,000</span>
+                    <img src="../../public/assets/images/customer/icons/budget.png" alt="">
+                </div>
+                <div>
+                    <span>اسم المقاول</span>
+                    <p>المقاول</p>
+                    <img src="../../public/assets/images/customer/icons/globe.png" alt="">
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+        <!--  change Inspection  popup  -->
+            <div class="request_inspection">
+                <div class="wrapper">
+                    <h6>تعديل موعد المعاينة</h6>
+                    <form action="" method="POST">
+                        <div class="new_date">
+                            <label for="inlineCalendar">اختر التاريخ الجديد</label>
+                            <input type="text" name="new_date" id="inlineCalendar" hidden>
+                        </div>
+                        <div class="input_group">
+                            <label for="time">اختر الوقت</label>
+                            <input type="time" name="time" id="time">
+                        </div>
+                        <p class="note">ملاحظة: يمكن تغيير الموعد مرة واحدة فقط، ويجب أن يكون قبل الموعد المحدد بـ 24 ساعة على الأقل.</p>
+                        <div class="buttons">
+                            <button class="main_btn_bg">تأكيد التغيير</button>
+                            <button class="main_btn_bg cancel" >إلغاء</button>
+                        </div>
+                    </form>
+                    <div class="close_request_inspection">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 4L4 12" stroke="#020817" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4 4L12 12" stroke="#020817" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        <!--  change Inspection  popup  -->
+
+
+
+        <div class="about_project">
+
+            <div class="buttons_tap">
+                <ul id="menu-tabs">
+                    <li data-target="overview" class="active">
+                        <i class="fa-regular fa-eye"></i>
+                        <span>نظرة عامة</span>
+                    </li>
+                    <li data-target="requirements">
+                        <i class="fa-regular fa-eye"></i>
+                        <span>المتطلبات</span>
+                    </li>
+                    <li data-target="order_status">
+                        <i class="fa-regular fa-eye"></i>
+                        <span>حالة الطلب</span>
+                    </li>
+                    <li data-target="assigned_consultant">
+                        <i class="fa-regular fa-eye"></i>
+                        <span>الاستشاري المعين</span>
+                    </li>
+                    <li data-target="documents">
+                        <i class="fa-regular fa-eye"></i>
+                        <span>المستندات</span>
+                    </li>
+                </ul>
+            </div>
+
+
+
+            <div class="contents">
+
+                <div class="content_tap overview ">
+                    <div class="project_desc">
+                        <h6>وصف المشروع</h6>
+                        <p> شقة سكنية فاخرة مع مرافق حديثة تشمل مسبح وصالة رياضية ومواقف سيارات.</p>
+                    </div>
+                    <div class="info">
+                        <div class="row w-100">
+                            <div class="col-6">
+                                <div class=" box location">
+                                    <div>
+                                        <i class="fa-regular fa-eye"></i>
+                                        <span>الموقع</span>
+                                    </div>
+                                    <h6>الرياض</h6>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                 <div class="box type">
+                                    <div>
+                                        <i class="fa-regular fa-eye"></i>
+                                        <span>نوع المشروع</span>
+                                    </div>
+                                    <h6>سكني</h6>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                 <div class="box dateline">
+                                    <div>
+                                        <i class="fa-regular fa-eye"></i>
+                                        <span>مدة التنفيذ المتوقعة</span>
+                                    </div>
+                                    <h6>سنة</h6>
+                                </div>  
+                            </div>
+                            <div class="col-6">
+                                <div class="box budget">
+                                    <div>
+                                        <i class="fa-regular fa-eye"></i>
+                                        <span>الميزانية المتوقعة</span>
+                                    </div>
+                                    <h6>15,000,000 ريال</h6>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+
+                <div class="content_tap requirements d-none">
+                    <div class="specializations">
+                        <h6>التخصصات المطلوبة</h6>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="box">
+                                    <img src="../../public/assets/images/customer/icons/checked.png" alt="">
+                                    <span>البناء الهيكلي</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="box">
+                                    <img src="../../public/assets/images/customer/icons/checked.png" alt="">
+                                    <span>البناء الهيكلي</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="box">
+                                    <img src="../../public/assets/images/customer/icons/checked.png" alt="">
+                                    <span>البناء الهيكلي</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="box">
+                                    <img src="../../public/assets/images/customer/icons/checked.png" alt="">
+                                    <span>البناء الهيكلي</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="technical mt-3">
+                        <h6>المتطلبات الفنية</h6>
+                        <ul>
+                            <li>
+                                <img src="../../public/assets/images/customer/icons/green-check.png" alt="">
+                                <p>استخدام مواد عالية الجودة ومطابقة للمواصفات السعودية</p>
+                            </li>
+                            <li>
+                                <img src="../../public/assets/images/customer/icons/green-check.png" alt="">
+                                <p>الالتزام بمعايير السلامة والأمان المهني</p>
+                            </li>
+                            <li>
+                                <img src="../../public/assets/images/customer/icons/green-check.png" alt="">
+                                <p>تقديم ضمان لمدة سنتين على جميع الأعمال</p>
+                            </li>
+                            <li>
+                                <img src="../../public/assets/images/customer/icons/green-check.png" alt="">
+                                <p>توفير فريق عمل مؤهل ومعتمد</p>
+                            </li>
+                        </ul>
+                    </div> 
+                </div>
+
+
+                <div class="content_tap order_status d-none">
+                    <h6 class="main_title">حالة الطلب</h6>
+                    <div class="timeline">
+                        <div class="step completed">
+                            <div class="icon"><i class="fa fa-check"></i></div>
+                            <div class="content">
+                               <div class="title">
+                                    <h6>تم استلام الطلب</h6>
+                                    <span class="completed">مكتمل</span>
+                               </div>
+                               <p class="status">تم استلام طلب المشروع بنجاح</p>
+                               <div class="date">
+                                   <img src="../../public/assets/images/customer/icons/culander.png" alt="">
+                                   <span>2024-01-05</span>
+                               </div>
+                            </div>
+                        </div>
+
+                        <div class="step completed">
+                            <div class="icon"><i class="fa fa-eye"></i></div>
+                            <div class="content">
+                               <div class="title">
+                                    <h6>قيد المراجعة</h6>
+                                    <span class="completed">مكتمل</span>
+                               </div>
+                               <p class="status">جاري مراجعة تفاصيل المشروع والمستندات</p>
+                               <div class="date">
+                                   <img src="../../public/assets/images/customer/icons/culander.png" alt="">
+                                   <span>2024-01-05</span>
+                               </div>
+                            </div>
+                        </div>
+
+                        <div class="step completed">
+                            <div class="icon"><i class="fa fa-check"></i></div>
+                            <div class="content">
+                               <div class="title">
+                                    <h6>تمت الموافقة</h6>
+                                    <span class="completed">مكتمل</span>
+                               </div>
+                               <p class="status">تم قبول الطلب وتعيين استشاري للمعاينة</p>
+                               <div class="date">
+                                   <img src="../../public/assets/images/customer/icons/culander.png" alt="">
+                                   <span>2024-01-05</span>
+                               </div>
+                            </div>
+                        </div>
+
+                        <div class="step completed">
+                            <div class="icon"><i class="fa-solid fa-user"></i></div>
+                            <div class="content">
+                               <div class="title">
+                                    <h6>تم تعيين استشاري</h6>
+                                    <span class="completed">مكتمل</span>
+                               </div>
+                               <p class="status">تم تعيين استشاري معتمد لمعاينة الموقع</p>
+                               <div class="date">
+                                   <img src="../../public/assets/images/customer/icons/culander.png" alt="">
+                                   <span>2024-01-05</span>
+                               </div>
+                            </div>
+                        </div>
+
+                        <div class="step completed">
+                            <div class="icon"><i class="fa-regular fa-calendar"></i></div>
+                            <div class="content">
+                               <div class="title">
+                                    <h6>تم جدولة المعاينة</h6>
+                                    <span class="complete">في الانتظار</span>
+                               </div>
+                               <p class="status">تم تحديد موعد زيارة الموقع</p>
+                               <div class="date">
+                                   <img src="../../public/assets/images/customer/icons/culander.png" alt="">
+                                   <span>2024-01-05</span>
+                               </div>
+                            </div>
+                        </div>
+
+                        <div class="step waiting">
+                            <div class="icon"><i class="fa-regular fa-file"></i></div>
+                            <div class="content">
+                               <div class="title">
+                                    <h6>اكتملت المعاينة</h6>
+                                    <span class="">في الانتظار</span>
+                               </div>
+                               <p class="status">تم الانتهاء من معاينة الموقع وإعداد التقرير</p>
+                               <div class="date">
+                                   <img src="../../public/assets/images/customer/icons/culander.png" alt="">
+                                   <span>2024-01-05</span>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="content_tap assigned_consultant d-none">
+
+                    <h6 class="main_title mb-5">الاستشاري المسؤول</h6>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="perssonal_info">
+                                <div class="image">
+                                    <img src="" alt="">
+                                </div>
+                                <h6>م. أحمد محمد العلي</h6>
+                                <p>مشاريع تجارية وسكنية</p>
+                                <div class="rating">
+                                    <img src="../../public/assets/images/home/star.png" alt="">
+                                    <h6 class="num">4.9</h6>
+                                    <span>(156 معاينة)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="main_info">
+                                        <h6>المعلومات الأساسية</h6>
+                                        <div class="national_id">
+                                            <p>رقم الهوية:</p>
+                                            <span>2345678901</span>
+                                        </div>
+                                        <div class="experience">
+                                            <p>سنوات الخبرة:</p>
+                                            <span>12 سنة</span>
+                                        </div>
+                                        <div class="assigned">
+                                            <p>المعايانات المكتملة:</p>
+                                            <span>156 مشروع</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="certifictes">
+                                        <h6>الشهادات والاعتمادات</h6>
+                                        <div>
+                                            <img src="../../public/assets/images/customer/icons/checked.png" alt="">
+                                            <span>مهندس معتمد</span>
+                                        </div>
+                                        <div>
+                                            <img src="../../public/assets/images/customer/icons/checked.png" alt="">
+                                            <span>خبير تقييم عقاري</span>
+                                        </div>
+                                        <div>
+                                            <img src="../../public/assets/images/customer/icons/checked.png" alt="">
+                                            <span>استشاري إنشائي</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3 contact_consultant">
+                                <div class="col-md-4">
+                                    <a href="#" class="main_btn_bg" id="consultant_message">
+                                        <i class="fa-regular fa-comment"></i>
+                                        <span>دردشة مباشرة</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="#" class="main_btn_bg">
+                                        <i class="fa-regular fa-envelope"></i>
+                                        <span>إرسال بريد إلكتروني</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="#" class="main_btn_bg">
+                                        
+                                        <span>+966 55 987 6543</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="consultant_message ">
+                        <div class="wrapper">
+                            <h6 class="head">
+                                <span>إرسال رسالة إلى </span>
+                                <span>م. أحمد محمد العلي</span>
+                            </h6>
+                            <form action="" method="POST">
+                                <div class="quick_messages mt-4">
+                                    <h6>الرسائل السريعة</h6>
+                                    <div class="input_group">
+                                        <input type="text" name="message1" value="هل يمكن تأكيد موعد المعاينة؟" readonly>
+                                    </div>
+                                    <div class="input_group">
+                                        <input type="text" name="message1" value="أحتاج إلى معلومات إضافية حول المعاينة" readonly>
+                                    </div>
+                                    <div class="input_group">
+                                        <input type="text" name="message1" value="هل هناك أي متطلبات خاصة للمعاينة؟" readonly>
+                                    </div>
+                                    <div class="input_group">
+                                        <input type="text" name="message1" value="شكراً لكم على خدماتكم" readonly>
+                                    </div>
+                                </div>
+                                <div class="input_group textarea">
+                                    <label for="message">اكتب رسالتك</label>
+                                    <textarea name="message" id="message" placeholder="اكتب رسالتك هنا..."></textarea>
+                                </div>
+                                <p class="note">ملاحظة: سيتم الرد على رسالتك خلال 2-4 ساعات في أوقات العمل الرسمية.</p>
+                                <div class="buttons">
+                                    <button class="main_btn_bg">
+                                        <i class="fa-brands fa-telegram"></i>
+                                        <span>إرسال الرسالة</span>
+                                    </button>
+                                    <button type="submit" class="main_btn_bg cancel">
+                                        <span>إلغاء</span>
+                                    </button>
+                                </div>
+                            </form>
+                            <div class="close">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 4L4 12" stroke="#020817" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4 4L12 12" stroke="#020817" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="content_tap documents d-none">
+                   <div class="row">
+                        <div class="col-md-6">
+                             <div class="card_content">
+                                <div class="file_info">
+                                    <i class="fas fa-file-pdf icon-pdf fa-lg"></i>
+                                    <div class="file_details">
+                                        <p>رخصة البناء.pdf</p>
+                                    </div>
+                                </div>
+                                <div class="file_actions">
+                                    <button class="main_btn_bg preview" onclick="previewFile('رخصة البناء.pdf')">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="main_btn_bg download" onclick="downloadFile('رخصة البناء.pdf')">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                             </div>
+                        </div>
+                   </div>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+    
+
+   
+
+<script>
+
+
+// Swetch taps and Sections :----
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll("#menu-tabs li");
+    const sections = document.querySelectorAll(".content_tap");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", function () {
+
+        // Remove active class from all taps :-
+        tabs.forEach(t => t.classList.remove("active"));
+        
+        // Add class Active for current tap :- 
+        this.classList.add("active");
+
+        // Hidden all Sections
+        sections.forEach(sec => sec.classList.add("d-none"));
+
+        // Show target Section :-
+        const targetClass = this.getAttribute("data-target");
+        const targetSection = document.querySelector(`.content_tap.${targetClass}`);
+        if (targetSection) {
+          targetSection.classList.remove("d-none");
+        }
+      });
+    });
+
+    // Show Frist Section :-
+    document.querySelector(".content_tap.overview").classList.remove("d-none");
+  });
+
+
+
+//  Open popup for contact with consultant :--- 
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector('#consultant_message').addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector('.consultant_message').classList.add("show");
+        });
+    });
+
+// Close popup for contact with consultant :---  
+    document.addEventListener("DOMContentLoaded", function () {
+        const consultantPopup = document.querySelector('.consultant_message');
+
+        document.querySelectorAll('.close, .cancel').forEach(button => {
+            button.addEventListener("click", function (e) {
+            e.preventDefault();
+            consultantPopup.classList.remove("show");
+            });
+        });
+    });
+</script>
+
+
+
+
+
+<!-- Calendar to select new date for change Inspection  -->
+<script>
+
+//  Open popup for change Inspection  :--- 
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector('.change_inspection').addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector('.request_inspection').classList.add("show");
+        });
+    });
+
+    // Close popup for contact with consultant :---  
+    document.addEventListener("DOMContentLoaded", function () {
+        const consultantPopup = document.querySelector('.request_inspection');
+
+        document.querySelectorAll('.close_request_inspection, .request_inspection .cancel').forEach(button => {
+            button.addEventListener("click", function (e) {
+            e.preventDefault();
+            consultantPopup.classList.remove("show");
+            });
+        });
+    });
+
+  flatpickr("#inlineCalendar", {
+    inline: true,
+    dateFormat: "Y-m-d",
+    minDate: "today"
+  });
+
+</script>
+
+
+
+<!-- open and download files  -->
+<script>
+    // open
+    function previewFile(fileName) {
+      window.open(`uploads/${fileName}`, '_blank')
+    }
+
+    // download
+    function downloadFile(fileName) {
+      const link = document.createElement('a')
+      link.href = `uploads/${fileName}`
+      link.download = fileName
+      link.click()
+    }
+</script>
+
+
+
+
+
+
+</body>
+</html>

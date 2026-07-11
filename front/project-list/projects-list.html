@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project List</title>
+
+    <link rel="stylesheet" href="../../public/assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+    <div class="projects_list_page">
+
+        <div class="breadcrumb_section">
+            <div class="breadcrumb">
+                <a href="#">
+                    <span>الرئيسية</span>
+                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.26579 14.1668H13.9324M9.78053 2.30345L4.12861 6.69939C3.7508 6.99324 3.5619 7.14017 3.42581 7.32417C3.30526 7.48716 3.21545 7.67077 3.16081 7.866C3.09912 8.08639 3.09912 8.3257 3.09912 8.80433V14.8334C3.09912 15.7669 3.09912 16.2336 3.28078 16.5901C3.44056 16.9037 3.69553 17.1587 4.00914 17.3185C4.36566 17.5001 4.83237 17.5001 5.76579 17.5001H15.4324C16.3659 17.5001 16.8326 17.5001 17.1891 17.3185C17.5027 17.1587 17.7577 16.9037 17.9174 16.5901C18.0991 16.2336 18.0991 15.7669 18.0991 14.8334V8.80433C18.0991 8.3257 18.0991 8.08639 18.0374 7.866C17.9828 7.67077 17.893 7.48716 17.7724 7.32417C17.6363 7.14017 17.4474 6.99324 17.0696 6.69939L11.4177 2.30345C11.1249 2.07574 10.9785 1.96189 10.8169 1.91812C10.6743 1.87951 10.524 1.87951 10.3813 1.91812C10.2197 1.96189 10.0733 2.07574 9.78053 2.30345Z" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.64917 9.09998L2.14917 5.59998L5.64917 2.09998" stroke="white" stroke-width="1.45833" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <a href="#">المشاريع</a>
+            </div>
+            
+            <h1 class="title_page">قائمة المشاريع</h1>
+        </div>
+
+
+
+        <div class="container">
+            <div class="fillter_search">
+                <form action="" method="POST">
+                    <div class="input_group">
+                        <div class="icon">
+                            <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.6748 19.6758L15.6124 16.6133M17.7998 11.3633C17.7998 15.4709 14.4699 18.8008 10.3623 18.8008C6.25468 18.8008 2.9248 15.4709 2.9248 11.3633C2.9248 7.25566 6.25468 3.92578 10.3623 3.92578C14.4699 3.92578 17.7998 7.25566 17.7998 11.3633Z" stroke="#A4A4A4" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <input type="search" name="keyword" id="searchInput" placeholder="ادخل كلمة البحث">
+                    </div>
+                    <div class="input_group">
+                        <div class="icon">
+                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.0996 21C15.5996 17.4 19.0996 14.1764 19.0996 10.2C19.0996 6.22355 15.9656 3 12.0996 3C8.23362 3 5.09961 6.22355 5.09961 10.2C5.09961 14.1764 8.59961 17.4 12.0996 21Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.0996 13C13.7565 13 15.0996 11.6569 15.0996 10C15.0996 8.34315 13.7565 7 12.0996 7C10.4427 7 9.09961 8.34315 9.09961 10C9.09961 11.6569 10.4427 13 12.0996 13Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <select name="region_id" id="region_id">
+                            <option value="1">الرباض</option>
+                            <option value="2">مكة</option>
+                            <option value="3">المدينة</option>
+                        </select>
+                    </div>
+                    <div class="input_group">
+                        <div class="icon">
+                            <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.68286 9.16671H6.51619C8.34953 9.16671 9.26619 8.25004 9.26619 6.41671V4.58337C9.26619 2.75004 8.34953 1.83337 6.51619 1.83337H4.68286C2.84953 1.83337 1.93286 2.75004 1.93286 4.58337V6.41671C1.93286 8.25004 2.84953 9.16671 4.68286 9.16671Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15.6829 9.16671H17.5162C19.3495 9.16671 20.2662 8.25004 20.2662 6.41671V4.58337C20.2662 2.75004 19.3495 1.83337 17.5162 1.83337H15.6829C13.8495 1.83337 12.9329 2.75004 12.9329 4.58337V6.41671C12.9329 8.25004 13.8495 9.16671 15.6829 9.16671Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15.6829 20.1667H17.5162C19.3495 20.1667 20.2662 19.25 20.2662 17.4167V15.5834C20.2662 13.75 19.3495 12.8334 17.5162 12.8334H15.6829C13.8495 12.8334 12.9329 13.75 12.9329 15.5834V17.4167C12.9329 19.25 13.8495 20.1667 15.6829 20.1667Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.68286 20.1667H6.51619C8.34953 20.1667 9.26619 19.25 9.26619 17.4167V15.5834C9.26619 13.75 8.34953 12.8334 6.51619 12.8334H4.68286C2.84953 12.8334 1.93286 13.75 1.93286 15.5834V17.4167C1.93286 19.25 2.84953 20.1667 4.68286 20.1667Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>      
+                        </div>
+                        <select name="fillter" id="fillter">
+                            <option value="1">فيلا</option>
+                            <option value="2">شقة</option>
+                            <option value="3">مول</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="main_button_bg">بحث</button>
+                </form>
+            </div>
+        </div>
+        
+
+    </div>
+
+
+
+
+    
+</body>
+</html>
+

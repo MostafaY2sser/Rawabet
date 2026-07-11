@@ -1,0 +1,2455 @@
+
+:root {
+  --main-color: #F5932E;
+}
+
+
+
+
+/*  Start Sidebar :-----------------------------  */
+
+aside .drodown a{
+    position: relative;
+}
+aside .drodown a .angle{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    transition: transform 0.3s ease;
+}
+aside .drodown.open a .angle {
+  transform: translateY(-50%) rotate(180deg);
+}
+aside .drodown_mune {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  border-right: 2px solid #E0E0E0;
+  margin-right: 30px;
+}
+aside .drodown_mune.show {
+  max-height: 500px; 
+}
+aside .drodown_mune li a{
+    font-weight: 400;
+    padding-right: 20px;
+    padding: 10px 20px 0 0;
+}
+aside .drodown_mune li a:hover{
+    background-color: transparent;
+}
+aside .drodown_mune li a:hover::after{
+    display: none;
+}
+aside .drodown_mune li a::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 11px;
+    height: 2px;
+    background-color: #E0E0E0;
+}
+@media ( max-width: 480px ) {
+    aside .drodown a .angle{
+        left: 0;
+    }
+}
+/*  End  Sidebar :----------------------------- */
+
+
+
+
+/* Start dashboard :-----------------------------  */
+.dashboard{
+    margin: 20px 260px 20px 20px ;
+}
+.dashboard .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.dashboard .head .text h3{
+    color: #111111;
+    font-size: 20px;
+    font-weight: 600;
+}
+.dashboard .head .text p{
+    color: #8D8D8D;
+    font-size: 14px;
+    font-weight: 400;
+} 
+.dashboard .projets_information{
+    background-color: #FFFFFF;
+    border: 1px solid #EFF1F5;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+.dashboard .projects_status {
+    border-bottom: 1px solid #EFF1F5;
+}
+.dashboard .projects_status .box{
+    padding: 0 10px;
+    border-right : 1px solid #EFF1F5;
+    position: relative;
+    height: 98px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.dashboard .projects_status .box h6{
+    color: #4B4B4B;
+    font-size: 14px;
+    font-weight: 400;
+}
+.dashboard .projects_status .box .numbers{
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+.dashboard .projects_status .box .numbers .left,
+.dashboard .projects_status .box .numbers .right{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.dashboard .projects_status .box .numbers .right p{
+    color: #707070;
+    font-size: 12px;
+    font-weight: 400;
+}
+.dashboard .projects_status .box .numbers .right span{
+    color: #111111;
+    font-size: 24px;
+    font-weight: 500;
+}
+.dashboard .projects_status .box .numbers .left{
+    color: #11B14B;
+    font-size: 12px;
+    font-weight: 400;
+}
+.dashboard .projects_status .box .dot{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    cursor: pointer;
+}
+.dashboard .payments{
+    margin: 0;
+}
+.dashboard .bills table tbody tr td{
+    padding: 0 10px !important ;
+    height: 70px;
+}
+.dashboard .bills table tbody tr .customer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.dashboard .bills tbody .customer i{
+    width: 24px;
+    height: 24px;
+    background-color: #E3E3E3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2B2B2B80;
+    font-size: 16px;
+    padding: 10px;
+}
+.dashboard .bills tbody .customer p{
+    color:#111111  ;
+    font-size: 14px;
+    font-weight: 400;
+}
+.dashboard .bills .head_row h6{
+    color: #111111;
+     font-size: 14px;
+    font-weight: 400;
+}
+.dashboard .bills .head_row div p{
+    color: #18181B;
+    font-size: 9px;
+    font-weight: 400;
+}
+.dashboard .bills .head_row div i{
+    color: #3C3F47;
+    font-size: 16px;
+}
+.dashboard .bills table tbody tr .prog progress{
+    height: 8px; 
+    appearance: none; 
+}
+.dashboard .bills table tbody tr .prog progress::-webkit-progress-bar{
+    background-color: #EFF1F5; 
+    border-radius: 10px;
+}
+.dashboard .bills table tbody tr .prog progress::-webkit-progress-value {
+    background-color: var(--main-color); 
+    border-radius: 10px;
+} 
+.dashboard .bills table tbody tr .prog progress::-moz-progress-bar {
+    background-color: var(--main-color); 
+    border-radius: 10px;
+}
+.dashboard .bills table tbody tr .prog small{
+    color: #111111;
+    font-size: 14px;
+    font-weight: 500;
+}
+.dashboard .bills table tbody tr .task p{
+    background-color: #F3F4F6;
+    padding: 4px 8px;
+    border-radius: 30px;
+    color: #18181B;
+    font-size: 11px;
+    font-weight: 400;
+    width: fit-content;
+}
+.dashboard .bills{
+    box-shadow: 0px 1px 2px 0px #0000000D;
+}
+.dashboard .bills table tbody td .complete{
+    background-color:  #D1FAE5;
+    color: #047857;
+}
+.dashboard .bills table tbody td .in_progress{
+    background-color:  #F5932E1A;
+    color: #A16207;
+}
+.dashboard .bills table tbody td .pending{
+    background-color:  #F5932E1A;
+    color: #A16207;
+}
+.dashboard .bills table tbody td .planing{
+    background-color:  #DDE9FE;
+    color: #4C6CCC;
+}
+.dashboard .dashboard-card {
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+}
+.dashboard .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+.dashboard .title-section {
+    flex: 1;
+}
+.dashboard .main-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #111111;
+}
+.dashboard .subtitle {
+    font-size: 14px;
+    color: #8D8D8D;
+    font-weight: 400;
+}
+.dashboard .tabs-container .tabs {
+    display: flex;
+    align-items: center;
+    background-color: #F2F2F2;
+    border-radius: 12px;
+    padding: 6px  4px 4px 4px;
+    gap: 10px;
+}
+.dashboard .tab-button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #667085;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 4px 24px;
+    border-radius: 8px;
+}
+.dashboard .tab-button.active ,
+.dashboard .tab-button:hover {
+    color: #111111;
+    background-color: #ffffff;
+    font-weight: 600;
+}
+.dashboard .current-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1e293b;
+}
+.dashboard .chart-container {
+    position: relative;
+    height: 300px;
+}
+.dashboard .chart-container canvas {
+    max-height: 100% !important;
+}
+.dashboard .header .dot{
+    width: 36px;
+    height: 36px;
+    border: 1px solid #EFF1F5;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.dashboard .header .dot span{
+    color: #111111;
+    font-size: 20px;
+}
+.dashboard .tab-button.d-none {
+    display: none !important;
+}
+
+@media ( max-width: 992px ) {
+    .dashboard{
+        margin: 20px 55px 20px 10px ;
+    }
+    .dashboard .payments{
+        padding: 0 !important;
+    }
+    .dashboard .bills table tr td{
+        min-width: 190px !important;
+    }
+    .dashboard .projects_status .box{
+        margin-bottom: 10px;
+    }
+    .dashboard .head{
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+    }
+    .dashboard .head .text p {
+        font-size: 10px;
+    }
+    .dashboard .projects_status .box h6 {
+        margin-bottom: 5px;
+    }
+}
+@media (max-width: 768px) {
+   .dashboard .dashboard-card{
+        padding: 10px 5px;
+   }
+   .dashboard .payments .head select{
+        width: 80px;
+   }
+}
+@media (max-width: 480px) {
+    .dashboard .chart-container {
+        height: 180px;
+    }
+    .dashboard .header{
+        flex-direction: column;
+        margin: 20px;
+    }
+    .dashboard .tabs-container .tabs{
+        gap: 0;
+    }
+    .dashboard .tab-button{
+        padding: 4px 20px;
+    }
+    .dashboard .main-title{
+        font-size: 14px;
+    }
+    .dashboard .subtitle{
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* End dashboard  :----------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+/*  Start available  projects  :----------------------------- */
+.available_projects{
+    margin: 20px 260px 20px 20px ;
+}
+.available_projects .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.available_projects .head .text h3{
+    color: #111111;
+    font-size: 20px;
+    font-weight: 600;
+}
+.available_projects .head .text p{
+    color: #8D8D8D;
+    font-size: 14px;
+    font-weight: 400;
+} 
+.available_projects .filter_frojects{
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    padding: 20px;
+    margin: 30px 0;
+}
+.available_projects .filter_frojects i{
+    color: #4B5563;
+}
+.available_projects .filter_frojects .title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.available_projects .filter_frojects .title h6{
+    color: #1F2937;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0;
+
+}
+.available_projects .filter_frojects form .box .labal {
+    margin-bottom: 7px;
+}
+.available_projects .filter_frojects form .box .labal label{
+    color: #374151;
+    font-weight: 500;
+    font-size: 14px;
+}
+.available_projects .filter_frojects form .box .labal i{
+    font-size: 16px;
+    color: #374151;
+}
+.available_projects .filter_frojects .input_group input,
+.available_projects .filter_frojects .input_group select{
+    width: 100%;
+    height: 49px;
+}
+.available_projects .filter_frojects .input_group select{
+    text-align: start;
+    direction: rtl;
+}
+.available_projects .filter_frojects form .bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0 20px 0;
+}
+.available_projects .filter_frojects form .bottom .delete{
+    background-color: transparent;
+    border: none;
+    color: #4B5563;
+    font-size: 16px;
+    font-weight: 400;
+}
+.available_projects .filter_frojects form .bottom .main_btn_bg{
+    font-weight: 400;
+}
+/* .project_user.for_provider{
+    height: 355px;
+} */
+.project_user.for_provider .last p{
+    color: #4B5563;
+    font-size: 12px;
+    font-weight: 400;
+}
+.project_user.for_provider .last p span{
+    color: var(--main-color);
+    font-size: 14px;
+    font-weight: 500;
+}
+.project_user.for_provider .main_btn_bg{
+    background-color: transparent;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    font-weight: 400;
+}
+
+@media ( max-width: 992px ) {
+    .available_projects {
+        margin: 20px 55px 20px 10px;
+    }
+    .available_projects .head{
+        flex-direction: column;
+        align-items: normal;
+        gap: 10px;
+    }
+    .available_projects .head .text p{
+        font-size: 12px;
+    }
+    .available_projects .filter_frojects{
+        padding: 20px 5px;
+    }
+    .available_projects .filter_frojects .title h6{
+        font-size: 16px;
+    }
+    .available_projects .filter_frojects form .box{
+        margin-bottom: 20px;
+    }
+    .available_projects .filter_frojects form .bottom{
+        margin: 10px 0;
+    }
+    .available_projects .filter_frojects form .bottom .delete{
+        font-size: 14px;
+    }
+}
+
+/*  End available  projects :----------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Start project_details  provider  :----------------------------- */
+.project_details.provider .project_info .info .offers p{
+    color: var(--main-color);
+    font-size: 14px;
+    font-weight: 600;
+}
+.project_details.provider .project_info .main_btn_bg{
+    cursor: pointer;
+}
+
+
+/*  Progress Step  */
+.progress_step{
+    background-color: #ffffff;
+    border:  1px solid #EFF1F5;
+    height: 123px;
+    border-radius: 12px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.progress_step .multi-steps {
+    display: table;
+    table-layout: fixed;
+    width: 120%;
+    margin-top: 38px;
+    margin-right: -130px;
+}
+.progress_step .multi-steps > li {
+    counter-increment: stepNum;
+    text-align: center;
+    display: table-cell;
+    position: relative;
+    color: #854D0E;
+    font-size: 13px;
+    font-weight: 400;
+}
+.progress_step .multi-steps > li .top{
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #2B2B2B;
+    font-size: 12px;
+    font-weight: 500;
+}
+.progress_step .multi-steps > li .bottom{
+    display: inline-block;
+    color: #2B2B2B;
+    font-size: 12px;
+    font-weight: 400;
+}
+.progress_step .multi-steps > li:before {
+    content: '';
+    display: block;
+    margin: 0 auto 4px;
+    background-color: var(--main-color);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top: 11px;
+    position: relative;
+    z-index: 1;
+}
+.progress_step .multi-steps > li:after {
+    content: '';
+    height: 10px;
+    width: 100%;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 16px;
+    left: -50%;
+}
+.progress_step .multi-steps > li:last-child:after {
+display: none;
+}
+/* next step */
+.progress_step .multi-steps > li.is-active:before {
+content: "";
+font-family: inherit;
+font-weight: 700;
+background-color: var(--main-color);
+border-color: tomato;
+}
+.progress_step .multi-steps > li.is-active:after {
+    background-color: #D9D9D9;
+}
+.progress_step .multi-steps > li.is-active ~ li {
+    color: #4B4B4B;
+}
+.progress_step .multi-steps > li.is-active ~ li:before {
+content: "";
+font-family: inherit;
+font-weight: 700;
+background-color: #8A8A8A;
+border-color: #8A8A8A;
+}
+.progress_step .multi-steps > li.is-active ~ li:after {
+    background-color: #ededed;
+}
+@media ( max-width: 1300px ) {
+    .progress_step .multi-steps {
+        width: 110%;
+        margin-right: -50px;
+    }
+}
+@media ( max-width: 767px ) {
+    .progress_step {
+        padding: 0 15px;
+    }
+    .progress_step .multi-steps {
+        width: 113%;
+        margin-right: -20px;
+    }
+    .progress_step .multi-steps > li .top{
+        font-size: 9px;
+        width: 64px;
+    }
+    .progress_step .multi-steps > li .bottom{
+        font-size: 8px;
+    }
+    .progress_step .multi-steps > li:before{
+        width: 15px;
+        height: 15px;
+    }
+    .progress_step .multi-steps > li:after{
+        height: 5px;
+    }
+}
+
+/*  Progress Step  */
+
+
+
+
+/* End project_details  provider  :----------------------------- */
+
+
+
+
+
+
+
+
+/*  Start submit offer :-----------------------------  */
+.submit_offer{
+    margin: 20px 260px 20px 20px ;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border: 1px solid #EFF1F5;
+    border-radius: 12px;
+}
+.submit_offer .back_project{
+    color: #4B5563;
+    font-size: 16px;
+    font-weight: 400;
+}
+.submit_offer .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.submit_offer .head h6{
+    margin-bottom: 0;
+}
+.submit_offer .head .add-btn{
+    background-color: transparent;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+.submit_offer .item_box{
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    position: relative;
+}
+.submit_offer .item_box h6{
+    font-size: 16px;
+    font-weight: 500;
+    color: #1F2937;
+    margin-bottom: 10px;
+}
+.submit_offer .input_group{
+    margin-bottom: 20px;
+    position: relative;
+}
+.submit_offer input{
+    width: 100%;
+    height: 40px;
+}
+/* .submit_offer input[type="date"]{
+    text-align: end;
+} */
+input[type="date"]::-webkit-calendar-picker-indicator {
+}
+.submit_offer .input_group i{
+    position: absolute;
+    top: 60%;
+    left: 10px;
+    color: #9CA3AF;
+    display: none;
+}
+.submit_offer label{
+    color: #374151;
+    font-size: 14px;
+    font-weight: 500;
+}
+.submit_offer textarea{
+    width: 100%;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    height: 80px;
+    max-height: 80px;
+    padding: 10px;
+    outline: none;
+}
+.submit_offer textarea:focus{
+    border: 1px solid  var(--main-color);
+}
+.submit_offer textarea::placeholder{
+    font-size: 14px;
+    font-weight: 400;
+}
+.submit_offer .remove-btn{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    color: #DC2626;
+}
+.submit_offer h5{
+    color: #1F2937;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.submit_offer .time_tabel input::placeholder{
+    color: #000000;
+}
+.submit_offer .payment_schedule{
+    margin: 20px 0;
+}
+.submit_offer .payment_schedule .box{
+    background-color: #F9FAFB;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+.submit_offer .payment_schedule .box .top,
+.submit_offer .payment_schedule .box .bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.submit_offer .payment_schedule .top p{
+    color: #1F2937;
+    font-size: 16px;
+    font-weight: 500;
+}   
+.submit_offer .payment_schedule .bottom span{
+    color: #4B5563;
+    font-size: 14px;
+    font-weight: 400;
+}
+.submit_offer  .box.total{
+    background-color: #F5932E0D;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.submit_offer  .box.total span:last-child{
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: 700;
+}
+.submit_offer .box.total span:first-child{
+    color: var(--main-color);
+    font-size: 16px;
+    font-weight: 500;
+}
+.submit_offer .buttons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.submit_offer .buttons button{
+    font-weight: 400;
+}
+.submit_offer .buttons .save{
+    background-color: #4B5563;
+}   
+.submit_offer .buttons .cancel{
+    background-color: transparent;
+    color: #4B5563;
+    border: 1px solid  #4B5563;
+}   
+
+
+@media ( max-width: 992px ) {
+    .submit_offer {
+        margin: 20px 55px 20px 10px;
+        padding: 10px 5px;
+    }
+    .submit_offer .back_project span{
+        font-size: 14px;
+    }
+    .submit_offer .item_box{
+        padding: 10px 5px;
+    }
+    .submit_offer .input_group {
+        margin-bottom: 10px;
+    }
+    .submit_offer h5{
+        font-size: 16px;
+    }
+    .submit_offer .payment_schedule .top p,
+    .submit_offer .payment_schedule .box.total span:first-child ,
+    .submit_offer .payment_schedule .box.total span:last-child{
+        font-size: 14px;
+    }
+    .submit_offer .payment_schedule .bottom span{
+        font-size: 10px;
+    }
+    .submit_offer label{
+        font-size: 12px;
+    }
+}
+
+
+/*  End submit offer :-----------------------------  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  End myOffers :----------------------------------------------------------  */
+.myOffers{
+    margin: 20px 260px 20px 20px;
+}
+.myOffers .head h1{
+    font-size: 20px;
+    color: #111111;
+    font-weight: 600;
+}
+.myOffers .head p{
+    font-size: 14px;
+    color: #8D8D8D;
+    font-weight: 400;
+}
+.myOffers .search{
+    background-color: #ffffff;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+}
+.myOffers .search .input_group{
+    position: relative;
+    margin-bottom: 15px;
+}
+.myOffers .search .input_group i{
+    position: absolute;
+    top: 35%;
+    right: 6px;
+    color: #374151;
+}
+.myOffers .search .input_group input{
+    padding-right: 30px;
+}
+.myOffers .filter_buttons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.myOffers .filter_buttons button{
+    border: none;
+    background-color: #F3F4F6;
+    border-radius: 8px;
+    padding: 8px 16px;
+    color: #4B5563;
+    font-size: 14px;
+    font-weight: 500;
+}
+.myOffers .filter_buttons button.active{
+    background-color: var(--main-color);
+    color: #ffffff;
+}
+.myOffers .projects .project{
+    background-color: #ffffff;
+    border: 1px solid #EFF1F5;
+    border-radius: 8px;
+    padding: 20px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.myOffers .projects .project.cancelled{
+    background-color: #FEF2F2;
+    border: 1px solid #EFF1F5;
+}
+.myOffers .projects .project .status{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 30px;
+    padding: 4px 8px;
+    width: fit-content;
+    font-size: 12px;
+    font-weight: 500;
+}
+.myOffers .projects .project .pending{
+    background-color: #F5932E1A;
+    color: #A16207;
+}
+.myOffers .projects .project .accepted,
+.myOffers .projects .project .approved{
+    background-color: #D1FAE5;
+    color: #047857;
+}
+.myOffers .projects .project .require_complete{
+    background-color: #FFEDD5;
+    color: #C2410C;
+}
+.myOffers .projects .project .cancelled{
+    background-color: #FEE2E2;
+    color: #B91C1C;
+}
+.myOffers .projects .project .project_name{
+    color: #1F2937;
+    font-size: 16px;
+    font-weight: 600;
+}
+.myOffers .projects .project .order_number{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.myOffers .projects .project .info{
+    width: 100%;
+}
+.myOffers .projects .project .info .line{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.myOffers .projects .project .info .line div{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex-direction: row-reverse;
+}
+.myOffers .projects .project .info .line div i{
+    color: #9CA3AF;
+}
+.myOffers .projects .project .info .line div,
+.myOffers .projects .project .order_number,
+.myOffers .projects .project .info .line span{
+    color: #4B5563;
+    font-size: 14px;
+    font-weight: 400;
+}
+.myOffers .projects .project .info .line:first-child span{
+    color: #1F2937;
+    font-size: 18px;
+    font-weight: 700;
+}
+.myOffers .projects .project .response_status{
+    background-color: #F9FAFB;
+    border-radius: 8px;
+    padding: 12px;
+    width: 100%;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 400;
+} 
+.myOffers .projects .project .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+.myOffers .projects .project .buttons .update{
+    background-color: #EA580C;
+}
+.myOffers .projects .project a:last-child{
+    flex: 1;
+    font-weight: 400;
+}
+@media ( max-width:992px ) {
+    .myOffers{
+        margin: 20px 55px 20px 10px;
+    }
+}
+@media ( max-width : 480px ) {
+    .myOffers .filter_buttons button{
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
+/*  End myOffers :----------------------------------------------------------  */
+
+
+
+
+
+
+
+
+
+
+/*  Start Offer Details :----------------------------------------------------------  */
+.offer_details .offerDetails .box{
+    border-radius: 8px;
+    height: 112px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.offer_details .offerDetails .box.salary{
+    background-color: #EFF6FF;
+    color: #1E40AF;
+}
+.offer_details .offerDetails .box.submition{
+    background-color: #FAF5FF;
+    color: #6B21A8;
+}
+.offer_details .offerDetails .box.dateline{
+    background-color: #ECFDF5;
+    color: #065F46;
+}
+.offer_details .offerDetails .box .title{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.offer_details .offerDetails .box .title i{
+    font-size: 20px;
+}
+.offer_details .offerDetails .box .title p{
+    font-size: 14px;
+    font-weight: 500;
+}
+.offer_details .offerDetails .box .value{
+    font-size: 20px;
+    font-weight: 700;
+}
+.offer_details .offerDetails .box .sub{
+    font-size: 14px;
+    font-weight: 400;
+}
+.offer_details .offerDetails .offer_note{
+    background-color: #F9FAFB;
+    padding: 24px;
+    border-radius: 8px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.offer_details .offerDetails .offer_note h6{
+    color: #1F2937;
+    font-size: 18px;
+    font-weight: 600;
+}
+.offer_details .offerDetails .offer_note p{
+    color: #374151;
+    font-size: 14px;
+    font-weight: 400;
+}
+.offer_details .important_info{
+    background-color: #FEFCE8;
+    border: 1px solid #FEF08A;
+    border-radius: 8px ;
+    padding: 18px;
+    margin-bottom: 20px;
+}
+.offer_details .important_info div{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 10px;
+    color: #854D0E;
+}
+.offer_details .important_info div span{
+    font-size: 16px;
+    font-weight: 500;
+}
+.offer_details .important_info p{
+    color: #A16207;
+    font-size: 14px;
+    font-weight: 400;
+}
+.offer_details .WorkItems h6{
+    color: #1F2937;
+     font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-bottom: 30px;
+}
+.offer_details .items_list .item{
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+}
+.offer_details .items_list .item h5{
+    color: #111827;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    overflow-wrap: break-word;
+}
+.offer_details .items_list .item .title_row span{
+    color: #4B5563;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 7px;
+}
+.offer_details .items_list .item .title_row p{
+    color: #1F2937;
+    font-size: 16px;
+    font-weight: 500;
+    overflow-wrap: break-word; 
+    word-break: break-word;
+}
+.offer_details .items_list .item .box{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.offer_details .items_list .item .box .icon{
+    background-color: #F5932E1A;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-color);
+}
+.offer_details .items_list .item .box .text span{
+    color: #4B5563;
+    font-size: 14px;
+    font-weight: 400;
+}
+.offer_details .items_list .item .box .text h4{
+
+    color: #111827;
+    font-size: 16px;
+    font-weight: 600;
+}
+.offer_details .items_list .item .technical{
+    background-color: #F9FAFB;
+    padding: 18px;
+    padding: 18px;
+    border-radius: 8px;
+    margin-top: 20px ;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.offer_details .items_list .item .technical span{
+    color: #4B5563;
+    font-size: 14px;
+    font-weight: 500;
+}
+.offer_details .items_list .item .technical p{
+    color: #374151;
+    font-size: 14px;
+    font-weight: 400;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+.offer_details .paymentSched h6{
+    color: #111827;
+    font-size: 14px;
+    font-weight: 700;
+}
+.offer_details .paymentSchedule ul{
+    list-style: none;
+    padding-right: 0;
+}
+.offer_details .paymentSchedule ul li{
+    border: 1px solid #F3F4F6;
+    padding: 17px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 10px #eeeeee94;
+    margin: 20px 0;
+}
+.offer_details .paymentSchedule ul li .num{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #9CA3AF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 700;
+}
+.offer_details .paymentSchedule .text{
+    flex: 1;
+    margin-right: 20px;
+}
+.offer_details .paymentSchedule .text p{
+    color: #111827;
+}
+.offer_details .paymentSchedule .text p,
+.offer_details .paymentSchedule .text .span{
+    font-size: 14px;
+    font-weight: 400;
+}
+.offer_details .paymentSchedule .text .span{
+    color: #4B5563;
+}
+.offer_details .paymentSchedule .value{
+    font-size: 16px;
+    font-weight: 700;
+    color: #3C3F47;
+}
+.offer_details .paymentSchedule .total{
+    border: 1px solid var(--main-color);
+    background-color: #F5932E0D;
+    border-radius: 8px;
+    padding: 17px 0 17px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.offer_details .paymentSchedule .total.text,
+.offer_details .paymentSchedule .total.values{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.offer_details .paymentSchedule .total .text span{
+    color: var(--main-color);
+    font-size: 16px;
+    font-weight: 600;
+}
+.offer_details .paymentSchedule .total .text p,
+.offer_details .paymentSchedule .total .values p{
+    color: var(--main-color);
+    font-size: 14px;
+    font-weight: 400;
+}
+.offer_details .paymentSchedule .total .values span{
+    color: var(--main-color);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.offer_details .timeline ul{
+    list-style: none;
+    padding-right: 0;
+}
+.offer_details .timeline ul li{
+    border: 1px solid #F3F4F6;
+    padding: 17px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 10px #eeeeee94;
+    margin: 20px 0;
+}
+.offer_details .timeline ul li .num{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 700;
+}
+.offer_details .timeline .text{
+    flex: 1;
+    margin-right: 20px;
+}
+.offer_details .timeline .text div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.offer_details .timeline .text p,
+.offer_details .timeline .text div span{
+    font-size: 14px;
+    font-weight: 400;
+}
+.offer_details .timeline .text div span{
+    color: #4B5563;
+}
+.offer_details .timeline .text p{
+    color: #111827;
+}
+.offer_details .timeline .value{
+    font-size: 16px;
+    font-weight: 500;
+    color: #3C3F47;
+}
+.offer_details .timeline  .box{
+    border: 1px solid #E5E7EB;
+    background-color: #F9FAFB;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+.offer_details .timeline  .box i{
+    font-size: 24px;
+    color: #3C3F47;
+}
+.offer_details .timeline  .box span{
+    font-size: 16px;
+    font-weight: 700;
+    color: #3C3F47;
+}
+.offer_details .timeline  .box p{
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--main-color);
+}
+
+@media ( max-width: 767px ) {
+    .offer_details .offerDetails .box{
+        margin-bottom: 20px;
+    }
+    .offer_details .offerDetails .box .value,
+    .offer_details .offerDetails .offer_note h6,
+    .offer_details .items_list .item h5,
+    .offer_details .paymentSchedule .total .values span {
+        font-size: 16px;
+    }
+    .offer_details .items_list .item h5{
+        font-weight: 500;
+    }
+    .offer_details .items_list .item .title_row p,
+    .offer_details .timeline .box span{
+         font-size: 14px;
+    }
+    .offer_details .items_list .item .box{
+        margin-bottom: 10px;
+    }
+    .offer_details .paymentSchedule ul li,
+    .offer_details .timeline ul li {
+        padding: 10px;
+    }
+   .offer_details .paymentSchedule .total .text p, 
+   .offer_details .paymentSchedule .total .values p,
+   .offer_details .timeline .value {
+        font-size: 12px;
+   }
+    .offer_details .paymentSchedule .text span,
+    .offer_details .timeline .text p, 
+    .offer_details .timeline .text div span {
+        font-size: 10px;
+    }
+    .offer_details .paymentSchedule .value,
+    .offer_details .paymentSchedule .total .text span {
+        font-size: 12px;
+    }
+    .offer_details .paymentSchedule .total{
+        padding: 10px 0 10px 10px;
+    }
+    .offer_details .timeline ul li .num ,
+    .offer_details .paymentSchedule ul li .num{
+        width: 26px;
+        height: 26px;
+    }
+    .offer_details .timeline .text,
+    .offer_details .paymentSchedule .text{
+        margin-right: 10px;
+    }
+    .offer_details .items_list .item{
+        padding: 20px 10px;
+        margin-bottom: 20px;
+    }
+}
+/*  End Offer Details :----------------------------------------------------------  */
+
+
+
+
+
+
+
+
+
+
+/*  Start Project implementation  :----------------------------------------------------------  */
+.provider .project_info .about .box{
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.provider .project_info .about .box div{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.provider .project_info .about .box div i{
+    font-size: 20px;
+}
+.provider .project_info .about .box div p{
+    font-size: 14px;
+    font-weight: 500;
+}
+.provider .project_info .about .box span{
+    font-size: 22px;
+    font-weight: 700;
+}
+.provider .project_info .about .box .date{
+    font-size: 18px;
+}
+.provider .project_info .about .box.one{
+    background-color:#EFF6FF ;
+    color: #1E40AF;
+}
+.provider .project_info .about .box.two {
+    background-color: #ECFDF5 ;
+    color: #065F46;
+}
+.provider .project_info .about .box.three{
+    background-color: #FAF5FF;
+    color: #6B21A8;
+}
+.provider .project_info .about .box.four {
+    background-color: #FFF7ED;
+    color: #9A3412;
+}
+.provider .project_phases progress {
+  width: 100%; 
+  height: 8px; 
+  appearance: none; 
+}
+.provider .project_phases progress::-webkit-progress-bar {
+  background-color: #E5E7EB; 
+  border-radius: 10px;
+}
+.provider .project_phases progress::-webkit-progress-value {
+  background-color: var(--main-color); 
+  border-radius: 10px;
+}
+.provider .project_phases progress::-moz-progress-bar {
+  background-color: var(--main-color); 
+  border-radius: 10px;
+}
+.provider .project_phases .phases{
+    background-color: #ffffff;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    padding: 24px;
+    border-radius: 12px;
+}
+.provider .project_phases .phases h6{
+    color: #1F2937;
+    font-weight: 600;
+    font-size: 18px;
+}
+.provider .project_phases .phases .phase{
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+}
+.provider .project_phases .phases .phase:hover{
+    background-color: #F5932E1A;
+    border-color: var(--main-color);
+}
+.provider .project_phases .phases .phase .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.provider .phases .phase .head .status{
+    color: #374151;
+    padding: 4px 8px;
+    font-weight: 500;
+    font-size: 12px;
+    background-color: #F3F4F6;
+    border-radius: 30px;
+    margin-bottom: 0;
+}
+.provider .phases .phase .head .status.pending{
+    background-color: #F5932E1A;
+    color: var(--main-color);
+}
+.provider .project_phases .phase .head div{
+    color: #1F2937;
+    font-weight: 500;
+    font-size: 14px;
+}
+.provider .project_phases .phase h5{
+    color: #1F2937;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 10px 0;
+}
+.provider .project_phases .phase .prog{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.provider .project_phases .phase .prog span{
+     color: #4B5563;
+    font-weight: 400;
+    font-size: 14px;
+}
+.provider .project_phases .data{
+    background-color: #ffffff;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    padding: 24px;
+    border-radius: 12px;
+}
+.provider .project_phases .data .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.provider .project_phases .data .head h4{
+    color: #1F2937;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+.provider .project_phases .data .head .buttons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.provider .project_phases .data .order{
+    background-color: transparent;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+.provider .data .phase_description p,
+.provider .data .data_box p,
+.provider .data .current_progress p{
+    color: #374151;
+     font-weight: 500;
+    font-size: 14px;
+}
+.provider .data .current_progress span{
+    color: var(--main-color);
+     font-weight: 700;
+    font-size: 18px;
+}
+.provider .data .phase_description span{
+    color: #4B5563;
+    font-weight: 400;
+    font-size: 14px;
+}
+.provider .data .data_box span{
+     color: #1F2937;
+    font-weight: 400;
+    font-size: 14px;
+}
+.provider .data .phase_notes p{
+    color: #374151;
+    font-weight: 400;
+    font-size: 14px;
+}
+.provider .data .phase_notes span{
+    display: inline-block;
+    width: 100%;
+    height:100px;
+    background-color: #D1D5DB33;
+    border: 1px solid #D1D5DB;
+    color: #000000;
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 10px;
+}
+.provider .data .phase_images h6{
+    color: #374151;
+    font-weight: 400;
+    font-size: 14px;
+}
+.provider .data .phase_images .image{
+    width: 100%;
+    height: 96px;
+    background-color: #E5E7EB;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.provider .data .buttons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.provider .data .buttons .report{
+    background-color: #4B5563;
+}
+@media ( max-width:992px ) {
+    .provider .project_phases .phases,
+    .provider .project_phases .data{
+        padding: 10px 5px;
+    }
+    .provider .data .phase_images .image{
+        margin: 5px;
+    }
+    .provider .project_phases .data .head h4,
+    .provider .project_phases .phase h5 ,
+    .provider .project_phases .phases h6 {
+        font-size: 14px;
+    }
+    .provider .project_phases .data .head .buttons .main_btn_bg{
+        height: 28px;
+        padding: 0 6px;
+        font-size: 8px;
+    }
+    .provider .project_info .about .box span{
+        font-size: 18px;
+    }
+}
+
+/*  End Project implementation  :----------------------------------------------------------  */
+
+
+
+
+
+
+
+
+
+/*  Start update_progress  :----------------------------------------------------------  */
+.update_progress{
+    margin: 20px 260px 20px 20px;
+}
+.update_progress .info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+.update_progress .info a{
+    color: #4B5563;
+    font-size: 16px;
+    font-weight: 400;
+}
+.update_progress .info  .status{
+    width: fit-content;
+    padding: 4px 8px;
+    border-radius: 30px;
+    color: #A16207;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #F5932E1A;
+}
+.update_progress .info  .name{
+    color: #1F2937;
+    font-size: 24px;
+    font-weight: 700;
+} 
+.update_progress .info .buttons{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.update_progress .info .buttons .cancel{
+    background-color: #4B5563;
+    color: #ffffff;
+}
+.update_progress .Phase_Progress,
+.update_progress .add_images,
+.update_progress .not_group,
+.update_progress .info,
+.update_progress .timeline{
+    background-color: #ffffff;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 20px 0;
+}
+.update_progress .Phase_Progress h6,
+.update_progress .timeline h6{
+    color: #1F2937;
+    font-size: 16px;
+    font-weight: 600;
+}
+.update_progress .Phase_Progress .prograss div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.update_progress .prograss div span{
+    color: var(--main-color);
+    font-size: 24px;
+    font-weight: 700;
+}
+.update_progress .prograss div p{
+    color: #374151;
+    font-size: 14px;
+    font-weight: 500;
+}
+.update_progress .Phase_Progress .prograss{
+    margin: 15px 0;
+}
+.update_progress #Phase_Progress{
+    width: 100%;
+    height: 12px;
+    accent-color: var(--main-color);
+    border-radius: 12px;
+}
+
+.update_progress .timeline .line{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+.update_progress .timeline .line .icon{
+    color: #4B5563;
+    font-size: 14px;
+    font-weight: 400;
+}
+.update_progress .timeline .line p{
+    color: #1F2937;
+    font-size: 16px;
+    font-weight: 500;
+}
+.update_progress .timeline .remaining{
+    background-color: #F5932E0D;
+    color: var(--main-color);
+    padding: 10px;
+    border-radius: 8px;
+}
+.update_progress .timeline .remaining div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.update_progress .timeline .remaining span{
+    font-size: 16px;
+    font-weight: 600;
+}
+.update_progress .input_group label,
+.update_progress .add_images .head h6{
+    color: #1F2937;
+     font-size: 18px;
+    font-weight: 600;
+}
+.update_progress textarea{
+    height: 91px;
+    max-height: 91px;
+    border-radius: 8px;
+    padding: 10px;
+    border:1px solid #D1D5DB;
+    background-color: #ffffff;
+    outline: none;
+}
+.update_progress textarea:focus{
+    border-color: var(--main-color);
+}
+.update_progress .add_images .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.update_progress .image-container {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.update_progress .image-container img {
+    width: 250px;
+    height: 128px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    object-fit: cover;
+}
+/*  End update_progress     */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  Start payments  Ibraheem :---------------------------------------------------------- */
+.payments {
+    margin: 20px 260px 20px 20px;
+}
+.payments  .box-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 12px;
+    border-width: 1px;
+    padding: 20.8px;
+}
+.payments   .box-1 .data {
+    display: flex;
+    flex-direction: column;
+}
+.payments .box-1 .data span {
+    color: #4B5563;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: right;
+}
+.payments   .box-1 .data b {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 24px;
+    text-align: right;
+}
+.payments div div .box-1 .data p {
+    color: #059669;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: right;
+}
+.payments  .box-1 .data-1 p {
+    color: #059669;
+}
+.payments  .box-1 .data-2 p {
+    color: #CA8A04;
+}
+.payments  .box-1 .data-3 p {
+    color: var(--main-color);
+}
+.payments  .box-1 .data-4 p {
+    color: #9333EA;
+}
+.payments  .box-1 .mine-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+}
+.payments  .box-1 .mine-box-1 {
+    color: #059669;
+    background-color: #ECFDF5;
+}
+.payments  .box-1 .mine-box-2 {
+    background-color: #FEFCE8;
+    color: #CA8A04;
+}
+.payments  .box-1 .mine-box-3 {
+    background-color: #EFF6FF;
+    color: var(--main-color);
+}
+.payments  .box-1 .mine-box-4 {
+    background-color: #FAF5FF;
+    color: #9333EA;
+}
+
+/* -----------------------end-cards-------------------- */
+
+/* -----------------------start-payment-management----- */
+.payments .payment-management {
+    background-color: #ffffff;
+    padding: 24.8px;
+    margin: 2rem 0;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    border-radius: 12px;
+}
+.payments .payment-management form .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.payments .payment-management .head .left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.payments .bills .head form input,
+.payments .payment-management .head .left input{
+    padding-right: 35px;
+}
+.payments .bills .head form i,
+.payments .payment-management .head .left i{
+    color: #9CA3AF;
+}
+.payments  .payment-management-header h4 {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 20px;
+    text-align: right;
+}
+.payments .payment-management-header .buttons {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 13px;
+    margin-top: 20px;
+}
+.payments .payment-management-header .buttons a {
+    font-weight: 500;
+    text-align: center;
+    color: #4B5563;
+    border: 1px #F3F4F6 solid;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #F3F4F6;
+    transition: 0.3s;
+    padding: 8px 16px;
+}
+.payments .payment-management-header .buttons a.active,
+.payments .payment-management-header .buttons a:hover {
+    font-weight: 500;
+    text-align: center;
+    color: #ffffff;
+    border: 1px var(--main-color) solid;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: var(--main-color);
+}
+.payments .bills {
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 12px;
+}
+.payments .bills .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+.payments .bills .head .text h6{
+    font-size: 16px;
+    font-weight: 500 ;
+    color: #111111;
+    margin-bottom: 0;
+}
+.payments .bills .head .text span{
+    font-size: 14px;
+    font-weight: 400 ;
+    color: #8D8D8D;
+}
+.payments .bills .head form{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.payments .bills table{
+     width: 100%
+}
+.payments .bills table thead tr th {
+    border: 1px #eee solid;
+    padding: 15px;
+    color: #6B7280;
+    background-color: #EDEDED;
+    font-weight: 400;
+    font-size: 14px;
+}
+.payments .bills table thead tr td {
+    border: 1px #eee solid;
+    padding: 15px;
+    color: #6B7280;
+    font-weight: 400;
+    font-size: 14px;
+}
+.payments .bills table tbody tr td span {
+    background-color: #D1FAE5;
+    color: #047857;
+    border-radius: 30px;
+    padding: 2px 10px;
+}
+.payments .bills table tbody tr td .atm {
+    background-color: #DBEAFE;
+    color: #1D4ED8;
+    border-radius: 30px;
+    padding: 2px 8px;
+}
+.payments .bills table tbody tr{
+    border:  1px  solid #EDEDED;
+}
+.payments .bills table tbody tr td {
+    padding: 24px 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.payments .bills table tbody tr td.date{
+    font-size: 13px;
+    font-weight: 400;
+    color: #3C3F47;
+    align-items: center;
+}
+.payments .bills table tbody tr td.date p{
+    margin-bottom: 0;
+}
+.payments .bills table tbody tr td.head_row{
+    color: #6B7280;
+}
+@media (max-width :767px) {
+    .payments .payment-management{
+        padding: 20px 10px;
+        margin: 1rem 0;
+    }
+    .payments .payment-management form .head{
+        flex-direction: column;
+        align-items: normal;
+    }
+    .payments .bills {
+        overflow-x: scroll;
+    }
+    .payments .bills table thead tr th{
+        min-width: 128px;
+    }
+    .payments .bills table tbody tr td {
+        min-width: 120px;
+        font-size: 12px;
+    }
+    .payments .payment-management .head .left .main_btn_bg{
+        padding: 0 10px;
+    }
+    .payments .payment-management .head .left input{
+        width: 200px;
+    }
+    .payments .payment-management-header .buttons a {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+/* --------------------- */
+@media (max-width: 992px) {
+    .payments {
+        /* background-color: #EFF1F5; */
+        margin: 20px 55px 20px 10px ;
+    }
+    .payments div div .box-1 {
+        margin: 6px 0px;
+    }
+    .payments .payment-management-header .buttons button {
+        font-size: 14px;
+    }
+    .payments .payment-management-header .buttons {
+        display: flex;
+        align-items: start;
+        flex-wrap: wrap;
+    }
+    .payments .payment-management-header .buttons {
+        display: flex;
+        align-items: start;
+    }
+}
+@media (max-width: 767px) {
+    .payments .bills .head{
+        align-items: start;
+    }
+    .payments .bills .head form input{
+        width: 210px;
+    }
+    .payments .bills .header-bills,
+    .sec {
+        overflow-x: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .payments .bills .header-bills::-webkit-scrollbar,
+    .sec::-webkit-scrollbar {
+        display: none;
+    }
+    .payments .bills .header-bills p,
+    .payments .bills .sec p {
+        min-width: 110px;
+    }
+}
+/*  End payments  Ibraheem  :---------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  Start profile  :---------------------------------------------------------- */
+.profile .profile_info .text h1{
+    color: #1F2937;
+    font-size: 22px;
+    font-weight: 700;
+}
+.profile .profile_info .image{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient( #2563EB , #059669 );
+}
+.profile .profile_info .image img{
+    width: 70%;
+}
+.profile .profile_info .info h2{
+    color:#1F2937;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.profile .profile_info .info p{
+    color:  #4B5563;
+    font-size: 16px;
+    font-weight: 400;
+}
+.profile .status_profile{
+    background-color: #D1FAE5;
+    padding: 4px 12px;
+    border-radius: 30px;
+    color: #047857;
+    font-size: 14px;
+    font-weight: 500;
+    width: fit-content;
+    margin-top: 10px;
+}
+.profile .main_info .about div{
+    margin: 12px 0;
+}
+.profile .main_info .about p{
+    color:  #374151;
+    font-size: 14px;
+    font-weight: 500;
+}
+.profile .main_info .about span{
+    color:  #1F2937;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 4px;
+}
+.profile .main_info .Geographical h6,
+.profile .main_info .specialization h6{
+     font-size: 14px;
+    font-weight: 500;
+    color:#374151;
+    margin-top: 20px;
+}
+.profile .main_info .Geographical span,
+.profile .main_info .specialization span{
+    padding: 4px 12px;
+    background-color: #DBEAFE;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #1E40AF;
+}
+.profile .main_info .Geographical span{
+    color: #065F46;
+    background-color: #D1FAE5;
+}
+.profile .documents .file{
+    background-color: #ffffff;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    padding: 16px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.profile .documents .file h6{
+    font-size: 16px;
+    font-weight: 500;
+    color: #1F2937;
+}
+.profile .documents .file .file_name{
+    font-size: 16px;
+    font-weight: 400;
+    color : #4B5563;
+}
+.profile .documents .file .status_profile{
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+.profile .documents .file .veiw{
+    background-color: #4B5563;
+}
+.profile .documents form{
+    background-color: #F5932E0D;
+    color: var(--main-color);
+    border:  1px solid var(--main-color);
+    border-radius: 16px;
+    padding: 16px;
+}
+.profile .documents form h6{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.profile .documents form p{
+    font-size: 14px;
+    font-weight: 400;
+    margin: 7px 0;
+}
+.profile .documents form .main_btn_bg{
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.profile .documents form .save{
+    display: none;
+}
+
+
+ /* .profile .evaluation {
+     padding: 1rem 260px 1rem 1rem;
+ } */
+ .profile .evaluation .sec {
+     padding: 1rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     gap: 10px;
+     border-radius: 8px;
+ }
+ .profile .evaluation .sec i {
+     text-align: center;
+     font-size: 32px;
+ }
+ .profile .evaluation .sec p {
+     text-align: center;
+     font-size: 24px;
+     font-weight: 700;
+     margin: 0;
+ }
+ .profile .evaluation .sec span {
+     font-weight: 400;
+     font-size: 14px;
+     text-align: center;
+ }
+ .profile .evaluation .sec-1 {
+     background-color: #EFF6FF;
+     color: #1E40AF;
+ }
+ .profile .evaluation .sec-2 {
+     background-color: #ECFDF5;
+     color: #059669;
+ }
+ .profile .evaluation .sec-3 {
+     background-color: #FAF5FF;
+     color: #6B21A8;
+ }
+ .profile .evaluation .sec-4 {
+     background-color: #FFF7ED;
+     color: var(--main-color);
+ }
+ .profile .evaluation .last-rating {
+     margin-top: 1rem;
+     display: flex;
+     flex-direction: column;
+     gap: 16px;
+     background-color: #F9FAFB;
+     border-radius: 8px;
+     padding: 24px;
+ }
+ .profile .evaluation .last-rating h3 {
+     font-weight: 600;
+     font-size: 18px;
+     text-align: right;
+     color: #1F2937;
+ }
+ .profile .evaluation .last-rating .box {
+     background-color: #ffffff;
+     display: flex;
+     flex-direction: column;
+     gap: 8px;
+     border-radius: 8px;
+     padding: 16px;
+ }
+ .profile .evaluation .last-rating .box-1 .head {
+     display: flex;
+     justify-content: space-between;
+     width: 100%;
+ }
+ .profile .evaluation .last-rating .box-1 .head p {
+     font-weight: 500;
+     font-size: 16px;
+     text-align: right;
+     color: #1F2937;
+     margin: 0;
+ }
+ .profile .evaluation .last-rating .box-1 .head span {
+     font-weight: 400;
+     font-size: 14px;
+     text-align: right;
+     color: #4B5563;
+     margin: 0;
+ }
+ .profile .evaluation .last-rating .box-1 .head .stars i {
+     color: gold;
+ }
+ .profile .evaluation .last-rating .box-1 .end-text p {
+     font-weight: 600;
+     font-weight: 400;
+     font-size: 14px;
+     color: #374151;
+ }
+ @media (max-width: 767px){
+    .profile .profile_info .text h1{
+        font-size: 14px;
+    }
+    .profile .profile_info .image{
+        width: 48px;
+        height: 48px;
+    }
+    .profile .profile_info .info p,
+    .profile .profile_info .info h2,
+    .profile .documents .file h6,
+    .profile .status_profile,
+    .profile .documents form p {
+        font-size: 10px;
+    }
+    .profile .documents .file .file_name{
+        font-size: 12px;
+    }
+    .profile .documents form h6{
+        font-size: 14px;
+    }
+ }
+ @media (max-width: 992px) {
+     
+     .profile .evaluation .sec {
+         gap: 5px;
+         margin: 5px 0;
+     }
+     .profile .evaluation .sec p {
+         font-weight: 600;
+         font-size: 18px;
+     }
+     .profile .evaluation .sec span {
+         font-weight: 500;
+         font-size: 14px;
+     }
+     .profile .evaluation .last-rating .box-1 .end-text p {
+         font-weight: 600;
+         font-size: 10px;
+     }
+     .profile .evaluation .last-rating .box-1 .head p {
+         font-weight: 500;
+         font-size: 14px;
+     }
+     .profile .evaluation .last-rating{
+        padding: 20px 10px;
+     }
+    .profile .evaluation .last-rating .box {
+        padding: 7px;
+    }
+ }
+
+
+
+/*  End profile  :---------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
